@@ -35,7 +35,7 @@ Don't want to download? No problem!
 ---
 
 ## About
-This Unity project is a Work In Progress (WIP). This was founded by Peter Uriarte, Maria Trezha Von Bargen, and Julia Mitchell and will serve as project leads for this project. The goal of this project is to learn how to navigate Unity's Game Engine, develop proficiency in C#,, gain experience developing Video Games, and working under team collaboration. This project is beginner friendly and should cover the basics of scripting, game objects/prefabs, basic collisions, and more.
+This Unity project is a Work In Progress (WIP). This was founded by Peter Uriarte, Maria Trezha Von Bargen, and Julia Mitchell and will serve as project leads for this project. The goal of this project is to learn how to navigate Unity's Game Engine, develop proficiency in C#, gain experience developing Video Games, and working under team collaboration. This project is beginner friendly and should cover the basics of scripting, game objects/prefabs, basic collisions, and more.
 
 
 ---
