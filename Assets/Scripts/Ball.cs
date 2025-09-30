@@ -13,9 +13,15 @@ public class Ball : MonoBehaviour
         ballRB = this.GetComponent<Rigidbody2D>();
     }
 
-    void Serve()
+    // inits the ball with a starting velocity.
+    // the angle is in radians and relative, counterclock to RIGHT
+    void Serve(Rigidbody2D rb, float spd, float ang)
     {
-        
+        // the speed is the "hypotenuse". To get the x or y components, get the sine (y) or cosine (x) of the angle, then multiply by the speed.
+        Vector2 serveVelo = new Vector2(Mathf.Cos(ang) * Speed, Mathf.Sin(ang) * Speed);
+
+        // set the rb's velocity.
+        rb.linearVelocity = serveVelo;
     }
 
     // Update is called once per frame
