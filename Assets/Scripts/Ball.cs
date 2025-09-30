@@ -8,6 +8,11 @@ public class Ball : MonoBehaviour
         
     }
 
+    void Serve()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
