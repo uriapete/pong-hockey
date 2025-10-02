@@ -13,7 +13,7 @@ public class Ball : MonoBehaviour
         ballRB = this.GetComponent<Rigidbody2D>();
 
         // serve the ball.
-        Serve(ballRB,Speed,5*Mathf.PI/4);
+        Serve(ballRB,Speed,4*Mathf.PI/4);
     }
 
     // inits the ball with a starting velocity.
