@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
@@ -20,7 +21,7 @@ public class Ball : MonoBehaviour
         ballRB = this.GetComponent<Rigidbody2D>();
 
         // serve the ball.
-        Serve(ballRB,Speed,3*Mathf.PI/4);
+        StartNewRound(TEMPServeAngle);
     }
 
     // inits the ball with a starting velocity.
@@ -46,6 +47,24 @@ public class Ball : MonoBehaviour
         ballRB.linearVelocity = Vector2.zero;
     }
 
+    // helper function for StartNewRound, allows for waiting
+    // Reset the ball, wait SecondsUntilServe seconds, Serve the ball at provided angle.
+    IEnumerator NewRoundCoroutine(float ang)
+    {
+        Reset();
+
+        yield return new WaitForSeconds(SecondsUntilServe);
+
+        Serve(ang);
+    }
+
+    // See NewRoundCoroutine.
+    void StartNewRound(float ang)
+    {
+        // https://stackoverflow.com/questions/30056471/how-to-make-the-script-wait-sleep-in-a-simple-way-in-unity
+        StartCoroutine(NewRoundCoroutine(ang));
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -53,7 +72,7 @@ public class Ball : MonoBehaviour
         // for testing purposes
         if (Input.GetKeyDown("space"))
         {
-            Reset();
+            StartNewRound(TEMPServeAngle);
         }
     }
 }
