@@ -27,6 +27,11 @@ public class Ball : MonoBehaviour
         rb.linearVelocity = serveVelo;
     }
 
+    void Serve(float ang)
+    {
+        Serve(ballRB, Speed, ang);
+    }
+
     // resets the ball's position and velocity to 0,0.
     void Reset()
     {
