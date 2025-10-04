@@ -27,6 +27,13 @@ public class Ball : MonoBehaviour
         rb.linearVelocity = serveVelo;
     }
 
+    // resets the ball's position and velocity to 0,0.
+    void Reset()
+    {
+        ballRB.position = Vector2.zero;
+        ballRB.linearVelocity = Vector2.zero;
+    }
+
     // Update is called once per frame
     void Update()
     {
