@@ -4,6 +4,10 @@ public class Ball : MonoBehaviour
 {
     public float Speed { get; private set; } = 5;
 
+    // TEMPORARY VARIABLE - angle at which the ball is served
+    // TODO - MAKE THIS ANGLE CHANGE THRUOUT THE GAME!
+    private float TEMPServeAngle { get; } = 3 * Mathf.PI / 4;
+
     // the RB node for the ball is here.
     Rigidbody2D ballRB;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
