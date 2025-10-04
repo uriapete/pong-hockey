@@ -37,6 +37,11 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // if space is pressed, reset ball
+        // for testing purposes
+        if (Input.GetKeyDown("space"))
+        {
+            Reset();
+        }
     }
 }
