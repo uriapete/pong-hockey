@@ -4,6 +4,9 @@ public class Ball : MonoBehaviour
 {
     public float Speed { get; private set; } = 5;
 
+    // how many seconds it takes from the ball placed on the board to being served.
+    private float SecondsUntilServe { get; } = 2.5F;
+
     // TEMPORARY VARIABLE - angle at which the ball is served
     // TODO - MAKE THIS ANGLE CHANGE THRUOUT THE GAME!
     private float TEMPServeAngle { get; } = 3 * Mathf.PI / 4;
