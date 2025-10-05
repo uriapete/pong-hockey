@@ -15,6 +15,10 @@ public class Ball : MonoBehaviour
     // the RB node for the ball is here.
     Rigidbody2D ballRB;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public bool rightScored = false;
+    public bool leftScored = false;
+
+
     void Start()
     {
         // get the ball's RB.
@@ -65,6 +69,18 @@ public class Ball : MonoBehaviour
         StartCoroutine(NewRoundCoroutine(ang));
     }
 
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("LeftWallTag"))
+        {
+            rightScored = true;
+        }
+        else if (collision.gameObject.CompareTag("RightWallTag"))
+        {
+            leftScored = true;
+        }
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -75,4 +91,5 @@ public class Ball : MonoBehaviour
             StartNewRound(TEMPServeAngle);
         }
     }
+
 }
