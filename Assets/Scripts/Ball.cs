@@ -7,13 +7,17 @@ public class Ball : MonoBehaviour
     // the RB node for the ball is here.
     Rigidbody2D ballRB;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public bool rightScored = false;
+    public bool leftScored = false;
+
+
     void Start()
     {
         // get the ball's RB.
         ballRB = this.GetComponent<Rigidbody2D>();
 
         // serve the ball.
-        Serve(ballRB,Speed,3*Mathf.PI/4);
+        Serve(ballRB, Speed, 3 * Mathf.PI / 4);
     }
 
     // inits the ball with a starting velocity.
@@ -27,9 +31,16 @@ public class Ball : MonoBehaviour
         rb.linearVelocity = serveVelo;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("LeftWallTag"))
+        {
+            rightScored = true;
+        }
+        else if (collision.gameObject.CompareTag("RightWallTag"))
+        {
+            leftScored = true;
+        }
     }
+
 }

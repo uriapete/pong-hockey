@@ -9,9 +9,12 @@ public class GameManager : MonoBehaviour
     public int scoreL {get; private set;}
     public int scoreR { get; private set; }
     int winningScore = 7;
+    public Ball ballRef; //references Ball script
+    
 
     public TextMeshProUGUI txtBoxL;
     public TextMeshProUGUI txtBoxR;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,27 +24,37 @@ public class GameManager : MonoBehaviour
 
         txtBoxL.text = scoreL.ToString();
         txtBoxR.text = scoreR.ToString();
+
+        //Find the single instance of the Ball script in the scene.
+        ballRef = FindFirstObjectByType<Ball>(); //assigns reference
+        
     }
+
+
+
 
     // Update is called once per frame
     void Update()
     {
 
         //If a player scores, call function to add score
-        if (Input.GetKeyDown("i"))          //test: change when goals set up
-        {
-            AddToScore(1, "playerL");
-        } else if (Input.GetKeyDown("j"))   //test: change when goals set up
+        if (ballRef.rightScored == true)          //test: change when goals set up
         {
             AddToScore(1, "playerR");
+            ballRef.rightScored = false;
+        }
+        else if (ballRef.leftScored == true)   //test: change when goals set up
+        {
+            AddToScore(1, "playerL");
+            ballRef.leftScored = false;
         }
 
-        
         if (Input.GetKeyDown("space"))      //test: reset
         {
             GameOver();
         }
     }
+
 
     //Adds score, Updates score box, Checks if a player wins
     void AddToScore(int point, string player)
