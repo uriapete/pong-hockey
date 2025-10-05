@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Ball : MonoBehaviour
 {
     public float Speed { get; private set; } = 5;
@@ -22,7 +23,7 @@ public class Ball : MonoBehaviour
     void Start()
     {
         // get the ball's RB.
-        ballRB = this.GetComponent<Rigidbody2D>();
+        ballRB = GetComponent<Rigidbody2D>();
 
         // serve the ball.
         StartNewRound(TEMPServeAngle);
