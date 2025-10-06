@@ -38,12 +38,12 @@ public class GameManager : MonoBehaviour
     {
 
         //If a player scores, call function to add score
-        if (ballRef.rightScored == true)          //test: change when goals set up
+        if (ballRef.rightScored == true)          
         {
             AddToScore(1, "playerR");
             ballRef.rightScored = false;
         }
-        else if (ballRef.leftScored == true)   //test: change when goals set up
+        else if (ballRef.leftScored == true)   
         {
             AddToScore(1, "playerL");
             ballRef.leftScored = false;
