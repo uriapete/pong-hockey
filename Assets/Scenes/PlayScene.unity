@@ -1831,8 +1831,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   rightScored: 0
   leftScored: 0
-  nextRound: 0
-  loadDelay: 2
 --- !u!50 &1864824152
 Rigidbody2D:
   serializedVersion: 5
@@ -1859,7 +1857,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!66 &1864824153
 CompositeCollider2D:
   m_ObjectHideFlags: 0
