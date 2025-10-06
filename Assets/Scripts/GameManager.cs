@@ -94,7 +94,11 @@ public class GameManager : MonoBehaviour
             }
 
             //GameOver();
+            return;
         }
+
+        // if no one won, serve the ball
+        ballRef.StartNewRound(servingAngle);
     }
 
     //Resets the game
