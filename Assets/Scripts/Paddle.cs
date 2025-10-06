@@ -1,3 +1,4 @@
+using System.Collections.Specialized;
 using UnityEngine;
 
 public class Paddle : MonoBehaviour
@@ -13,7 +14,7 @@ public class Paddle : MonoBehaviour
     private float verticalMovementR;
 
 
-    private float moveSpeed = 15f;
+    private float moveSpeed = 5f;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,8 +30,11 @@ public class Paddle : MonoBehaviour
     void Update()
     {
         
+
         //LEFT
+        
         verticalMovementL = Input.GetAxis("VerticalL");
+        
         //paddleL.transform.Translate(0f, verticalMovementL * moveSpeed, 0f);
         paddleL.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, verticalMovementL * moveSpeed);
 
