@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI txtBoxL;
     public TextMeshProUGUI txtBoxR;
 
+    // what angle will the ball be served at next?
+    private float servingAngle;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,7 +30,10 @@ public class GameManager : MonoBehaviour
 
         //Find the single instance of the Ball script in the scene.
         ballRef = FindFirstObjectByType<Ball>(); //assigns reference
-        
+
+        // sets the serving angle
+        // NOTE: THIS IS TEMPORARY! SEE GITHUB #37
+        servingAngle = ballRef.TEMPServeAngle;
     }
 
 
