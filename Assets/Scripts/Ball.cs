@@ -63,7 +63,7 @@ public class Ball : MonoBehaviour
     }
 
     // See NewRoundCoroutine.
-    void StartNewRound(float ang)
+    public void StartNewRound(float ang)
     {
         // https://stackoverflow.com/questions/30056471/how-to-make-the-script-wait-sleep-in-a-simple-way-in-unity
         StartCoroutine(NewRoundCoroutine(ang));
