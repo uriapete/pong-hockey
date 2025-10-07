@@ -18,8 +18,8 @@ public class Paddle : MonoBehaviour
 
     private float acceleration = 20f;
 
-    private float linDamp = 20f;
-    
+    private float linDampDelta = 1f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -39,7 +39,7 @@ public class Paddle : MonoBehaviour
         lPaddleRB.AddForceY(verticalMovementL * acceleration);
         if (Mathf.Abs(verticalMovementL) <= 0.01 && lPaddleRB.linearVelocity.magnitude > 0)
         {
-            lPaddleRB.linearDamping = linDamp;
+            lPaddleRB.linearDamping+=linDampDelta;
         }else if (Mathf.Abs(verticalMovementL) > 0)
         {
             lPaddleRB.linearDamping = 0;
@@ -52,7 +52,7 @@ public class Paddle : MonoBehaviour
         rPaddleRB.AddForceY(verticalMovementR * acceleration);
         if (Mathf.Abs(verticalMovementR) <= 0.01 && rPaddleRB.linearVelocity.magnitude > 0)
         {
-            rPaddleRB.linearDamping = linDamp;
+            rPaddleRB.linearDamping+=linDampDelta;
         }
         else if (Mathf.Abs(verticalMovementR) > 0)
         {
