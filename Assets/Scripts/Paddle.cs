@@ -14,10 +14,11 @@ public class Paddle : MonoBehaviour
     private float verticalMovementR;
 
 
-    private float moveSpeed = 5f;
+    private float moveSpeed = 7.5f;
 
-    private float acceleration = 20f;
+    private float acceleration = 50f;
 
+    private float linDamp = 100f;
     private float linDampDelta = 1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
