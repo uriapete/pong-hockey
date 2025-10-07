@@ -15,7 +15,9 @@ public class Paddle : MonoBehaviour
 
 
     private float moveSpeed = 5f;
-    
+
+    private float acceleration = 20f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,18 +31,16 @@ public class Paddle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
         //LEFT
-        
         verticalMovementL = Input.GetAxis("VerticalL");
-        
-        //paddleL.transform.Translate(0f, verticalMovementL * moveSpeed, 0f);
-        paddleL.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, verticalMovementL * moveSpeed);
+        Rigidbody2D lPaddleRB = paddleL.GetComponent<Rigidbody2D>();
+        lPaddleRB.AddForceY(verticalMovementL * acceleration);
+        lPaddleRB.linearVelocity = Vector2.ClampMagnitude(lPaddleRB.linearVelocity, moveSpeed);
 
         //RIGHT
         verticalMovementR = Input.GetAxis("VerticalR");
-        //paddleR.transform.Translate(0f, verticalMovementR * moveSpeed, 0f);
-        paddleR.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, verticalMovementR * moveSpeed);
+        Rigidbody2D rPaddleRB = paddleR.GetComponent<Rigidbody2D>();
+        rPaddleRB.AddForceY(verticalMovementR * acceleration);
+        rPaddleRB.linearVelocity = Vector2.ClampMagnitude(rPaddleRB.linearVelocity, moveSpeed);
     }
 }
