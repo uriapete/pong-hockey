@@ -18,6 +18,8 @@ public class Paddle : MonoBehaviour
 
     private float acceleration = 20f;
 
+    private float linDamp = 20f;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,12 +37,27 @@ public class Paddle : MonoBehaviour
         verticalMovementL = Input.GetAxis("VerticalL");
         Rigidbody2D lPaddleRB = paddleL.GetComponent<Rigidbody2D>();
         lPaddleRB.AddForceY(verticalMovementL * acceleration);
+        if (Mathf.Abs(verticalMovementL) <= 0.01 && lPaddleRB.linearVelocity.magnitude > 0)
+        {
+            lPaddleRB.linearDamping = linDamp;
+        }else if (Mathf.Abs(verticalMovementL) > 0)
+        {
+            lPaddleRB.linearDamping = 0;
+        }
         lPaddleRB.linearVelocity = Vector2.ClampMagnitude(lPaddleRB.linearVelocity, moveSpeed);
 
         //RIGHT
         verticalMovementR = Input.GetAxis("VerticalR");
         Rigidbody2D rPaddleRB = paddleR.GetComponent<Rigidbody2D>();
         rPaddleRB.AddForceY(verticalMovementR * acceleration);
+        if (Mathf.Abs(verticalMovementR) <= 0.01 && rPaddleRB.linearVelocity.magnitude > 0)
+        {
+            rPaddleRB.linearDamping = linDamp;
+        }
+        else if (Mathf.Abs(verticalMovementR) > 0)
+        {
+            rPaddleRB.linearDamping = 0;
+        }
         rPaddleRB.linearVelocity = Vector2.ClampMagnitude(rPaddleRB.linearVelocity, moveSpeed);
     }
 }
