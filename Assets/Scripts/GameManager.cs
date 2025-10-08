@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using System.Security.Cryptography;
 
 
 public class GameManager : MonoBehaviour
@@ -35,9 +36,13 @@ public class GameManager : MonoBehaviour
         //Find the single instance of the Ball script in the scene.
         ballRef = FindFirstObjectByType<Ball>(); //assigns reference
 
-        // sets the serving angle
-        // NOTE: THIS IS TEMPORARY! SEE GITHUB #37
-        servingAngle = ballRef.TEMPServeAngle;
+        RandomNumberGenerator.Create();
+
+        // sets the starting serving angle
+        // random selection of any of the 4 diagonal directions
+        servingAngle = ((RandomNumberGenerator.GetInt32(8) * 2) + 1) * (Mathf.PI / 4);
+        // set ball ref, will serve when ball is Ready
+        ballRef.StartServeAngle = servingAngle;
     }
 
 
