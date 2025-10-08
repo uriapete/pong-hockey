@@ -76,16 +76,22 @@ public class GameManager : MonoBehaviour
     {
 
         //Adds score, Updates score box
+        // sets serving angle to the round loser's side (base angle)
         if (player == "playerL")
         {
             scoreL += point;
             txtBoxL.text = scoreL.ToString();
+            servingAngle = baseServeAngleR;
         }
         else
         {
             scoreR += point;
             txtBoxR.text = scoreR.ToString();
+            servingAngle = baseServeAngleL;
         }
+
+        // this determines whether the ball goes to the up diag or down diag
+        servingAngle += 2 * RandomNumberGenerator.GetInt32(2) * Mathf.PI / 4;
 
 
         //Checks a if player wins
