@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
 
     // what angle will the ball be served at next?
     private float servingAngle;
+    
+    // base angles for serving left or right
+    private readonly float baseServeAngleL = 3 * Mathf.PI / 4;
+    private readonly float baseServeAngleR = -1 * Mathf.PI / 4;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
