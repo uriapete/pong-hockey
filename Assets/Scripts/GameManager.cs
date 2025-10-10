@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using System.Security.Cryptography;
 
 
 public class GameManager : MonoBehaviour
@@ -17,6 +18,10 @@ public class GameManager : MonoBehaviour
 
     // what angle will the ball be served at next?
     private float servingAngle;
+    
+    // base angles for serving left or right
+    private readonly float baseServeAngleL = 3 * Mathf.PI / 4;
+    private readonly float baseServeAngleR = -1 * Mathf.PI / 4;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,9 +36,13 @@ public class GameManager : MonoBehaviour
         //Find the single instance of the Ball script in the scene.
         ballRef = FindFirstObjectByType<Ball>(); //assigns reference
 
-        // sets the serving angle
-        // NOTE: THIS IS TEMPORARY! SEE GITHUB #37
-        servingAngle = ballRef.TEMPServeAngle;
+        RandomNumberGenerator.Create();
+
+        // sets the starting serving angle
+        // random selection of any of the 4 diagonal directions
+        servingAngle = ((RandomNumberGenerator.GetInt32(8) * 2) + 1) * (Mathf.PI / 4);
+        // set ball ref, will serve when ball is Ready
+        ballRef.StartServeAngle = servingAngle;
     }
 
 
@@ -67,16 +76,22 @@ public class GameManager : MonoBehaviour
     {
 
         //Adds score, Updates score box
+        // sets serving angle to the round loser's side (base angle)
         if (player == "playerL")
         {
             scoreL += point;
             txtBoxL.text = scoreL.ToString();
+            servingAngle = baseServeAngleR;
         }
         else
         {
             scoreR += point;
             txtBoxR.text = scoreR.ToString();
+            servingAngle = baseServeAngleL;
         }
+
+        // this determines whether the ball goes to the up diag or down diag
+        servingAngle += 2 * RandomNumberGenerator.GetInt32(2) * Mathf.PI / 4;
 
 
         //Checks a if player wins
