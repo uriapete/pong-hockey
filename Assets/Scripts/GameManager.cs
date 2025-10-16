@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        pauseMenu.SetActive(false);
+
         scoreL = 0;
         scoreR = 0;
 
