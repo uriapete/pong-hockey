@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
             GameOver();
         }
 
-        if (Input.GetKeyDown("escape"))      //test: reset
+        if (Input.GetKeyDown("escape"))      //pause the game
         {
             PauseGame();
         }
@@ -135,13 +135,13 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void PauseGame()
+    void PauseGame()    //pause game; clock stops
     {
         Time.timeScale = 0f;
         pauseMenu.SetActive(true);
     }
 
-    public void ResumeGame()
+    public void ResumeGame()    //resume game; clock resumes
     {
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
