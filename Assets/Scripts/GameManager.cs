@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using System.Security.Cryptography;
+using System.Threading;
 
 
 public class GameManager : MonoBehaviour
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI txtBoxL;
     public TextMeshProUGUI txtBoxR;
 
+    public GameObject pauseMenu;
     // what angle will the ball be served at next?
     private float servingAngle;
     
@@ -27,6 +29,8 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        pauseMenu.SetActive(false);
+
         scoreL = 0;
         scoreR = 0;
 
@@ -67,6 +71,11 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown("space"))      //test: reset
         {
             GameOver();
+        }
+
+        if (Input.GetKeyDown("escape"))      //pause the game
+        {
+            PauseGame();
         }
     }
 
@@ -126,6 +135,18 @@ public class GameManager : MonoBehaviour
             txtBoxL.text = scoreL.ToString();
             txtBoxR.text = scoreR.ToString();
 
+    }
+
+    void PauseGame()    //pause game; clock stops
+    {
+        Time.timeScale = 0f;
+        pauseMenu.SetActive(true);
+    }
+
+    public void ResumeGame()    //resume game; clock resumes
+    {
+        Time.timeScale = 1f;
+        pauseMenu.SetActive(false);
     }
 
 }
