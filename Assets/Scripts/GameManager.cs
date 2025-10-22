@@ -68,11 +68,6 @@ public class GameManager : MonoBehaviour
             ballRef.leftScored = false;
         }
 
-        if (Input.GetKeyDown("space"))      //test: reset
-        {
-            GameOver();
-        }
-
         if (Input.GetKeyDown("escape"))      //pause the game
         {
             PauseGame();
