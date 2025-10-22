@@ -157,10 +157,18 @@ public class GameManager : MonoBehaviour
 
     public void ResumeGame()    //resume game; clock resumes
     {
-        isPaused = false;
-        Time.timeScale = 1f;
-        pauseMenu.transform.Find("SettingsMenu").gameObject.SetActive(false);
-        pauseMenu.SetActive(false);
+        if (!pauseMenu.transform.Find("SettingsMenu").gameObject.activeSelf)    //if settings menu is open, go back to main pause menu
+        {
+            isPaused = false;
+            Time.timeScale = 1f;
+            pauseMenu.SetActive(false);
+        }
+        else     //if main menu is open, close pause menu and resume game
+        {
+            pauseMenu.transform.Find("SettingsMenu").gameObject.SetActive(false);
+            pauseMenu.transform.Find("MainMenu").gameObject.SetActive(true);
+        }
+        
     }
 
 }
