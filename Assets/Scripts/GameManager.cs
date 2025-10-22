@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         {
             if (isPaused)
             {
-                ResumeGame();
+                ResumeGameOrPreviousPage();
             }
             else
             {
@@ -155,7 +155,7 @@ public class GameManager : MonoBehaviour
         pauseMenu.SetActive(true);
     }
 
-    public void ResumeGame()    //resume game; clock resumes
+    public void ResumeGameOrPreviousPage()    //resume game; clock resumes
     {
         if (!pauseMenu.transform.Find("SettingsMenu").gameObject.activeSelf)    //if settings menu is open, go back to main pause menu
         {
