@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI txtBoxR;
 
     public GameObject pauseMenu;
+    private bool isPaused;
+
     // what angle will the ball be served at next?
     private float servingAngle;
     
@@ -75,7 +77,15 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown("escape"))      //pause the game
         {
-            PauseGame();
+            if (isPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+                
         }
     }
 
@@ -139,13 +149,17 @@ public class GameManager : MonoBehaviour
 
     void PauseGame()    //pause game; clock stops
     {
+        isPaused = true;
         Time.timeScale = 0f;
+        pauseMenu.transform.Find("MainMenu").gameObject.SetActive(true);
         pauseMenu.SetActive(true);
     }
 
     public void ResumeGame()    //resume game; clock resumes
     {
+        isPaused = false;
         Time.timeScale = 1f;
+        pauseMenu.transform.Find("SettingsMenu").gameObject.SetActive(false);
         pauseMenu.SetActive(false);
     }
 
