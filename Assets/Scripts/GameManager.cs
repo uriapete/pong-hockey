@@ -2,6 +2,8 @@ using System.Diagnostics;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using System.Security.Cryptography;
+using System.Threading;
 
 
 public class GameManager : MonoBehaviour
@@ -15,13 +17,22 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI txtBoxL;
     public TextMeshProUGUI txtBoxR;
 
+    public GameObject pauseMenu;
+    private bool isPaused;
+
     // what angle will the ball be served at next?
     private float servingAngle;
+    
+    // base angles for serving left or right
+    private readonly float baseServeAngleL = 3 * Mathf.PI / 4;
+    private readonly float baseServeAngleR = -1 * Mathf.PI / 4;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        pauseMenu.SetActive(false);
+
         scoreL = 0;
         scoreR = 0;
 
@@ -31,9 +42,13 @@ public class GameManager : MonoBehaviour
         //Find the single instance of the Ball script in the scene.
         ballRef = FindFirstObjectByType<Ball>(); //assigns reference
 
-        // sets the serving angle
-        // NOTE: THIS IS TEMPORARY! SEE GITHUB #37
-        servingAngle = ballRef.TEMPServeAngle;
+        RandomNumberGenerator.Create();
+
+        // sets the starting serving angle
+        // random selection of any of the 4 diagonal directions
+        servingAngle = ((RandomNumberGenerator.GetInt32(8) * 2) + 1) * (Mathf.PI / 4);
+        // set ball ref, will serve when ball is Ready
+        ballRef.StartServeAngle = servingAngle;
     }
 
 
@@ -55,9 +70,17 @@ public class GameManager : MonoBehaviour
             ballRef.leftScored = false;
         }
 
-        if (Input.GetKeyDown("space"))      //test: reset
+        if (Input.GetKeyDown("escape"))      //pause the game
         {
-            GameOver();
+            if (isPaused)
+            {
+                ResumeGameOrPreviousPage();
+            }
+            else
+            {
+                PauseGame();
+            }
+                
         }
     }
 
@@ -67,16 +90,22 @@ public class GameManager : MonoBehaviour
     {
 
         //Adds score, Updates score box
+        // sets serving angle to the round loser's side (base angle)
         if (player == "playerL")
         {
             scoreL += point;
             txtBoxL.text = scoreL.ToString();
+            servingAngle = baseServeAngleR;
         }
         else
         {
             scoreR += point;
             txtBoxR.text = scoreR.ToString();
+            servingAngle = baseServeAngleL;
         }
+
+        // this determines whether the ball goes to the up diag or down diag
+        servingAngle += 2 * RandomNumberGenerator.GetInt32(2) * Mathf.PI / 4;
 
 
         //Checks a if player wins
@@ -111,6 +140,30 @@ public class GameManager : MonoBehaviour
             txtBoxL.text = scoreL.ToString();
             txtBoxR.text = scoreR.ToString();
 
+    }
+
+    void PauseGame()    //pause game; clock stops
+    {
+        isPaused = true;
+        Time.timeScale = 0f;
+        pauseMenu.transform.Find("MainMenu").gameObject.SetActive(true);
+        pauseMenu.SetActive(true);
+    }
+
+    public void ResumeGameOrPreviousPage()    //resume game; clock resumes
+    {
+        if (!pauseMenu.transform.Find("SettingsMenu").gameObject.activeSelf)    //if settings menu is open, go back to main pause menu
+        {
+            isPaused = false;
+            Time.timeScale = 1f;
+            pauseMenu.SetActive(false);
+        }
+        else     //if main menu is open, close pause menu and resume game
+        {
+            pauseMenu.transform.Find("SettingsMenu").gameObject.SetActive(false);
+            pauseMenu.transform.Find("MainMenu").gameObject.SetActive(true);
+        }
+        
     }
 
 }

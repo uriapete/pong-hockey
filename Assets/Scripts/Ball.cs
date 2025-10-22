@@ -8,9 +8,9 @@ public class Ball : MonoBehaviour
     // how many seconds it takes from the ball placed on the board to being served.
     private float SecondsUntilServe { get; } = 2.5F;
 
-    // TEMPORARY VARIABLE - angle at which the ball is served
-    // TODO - MAKE THIS ANGLE CHANGE THRUOUT THE GAME!
-    public float TEMPServeAngle { get; private set; } = 3 * Mathf.PI / 4;
+    // angle which will be set at the start of the game by GM
+    // only used once
+    public float StartServeAngle { get; set; } = 3 * Mathf.PI / 4;
 
     // the RB node for the ball is here.
     Rigidbody2D ballRB;
@@ -25,7 +25,7 @@ public class Ball : MonoBehaviour
         ballRB = this.GetComponent<Rigidbody2D>();
 
         // serve the ball.
-        StartNewRound(TEMPServeAngle);
+        StartNewRound(StartServeAngle);
     }
 
     // inits the ball with a starting velocity.
@@ -84,12 +84,6 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if space is pressed, reset ball
-        // for testing purposes
-        if (Input.GetKeyDown("space"))
-        {
-            StartNewRound(TEMPServeAngle);
-        }
     }
 
 }
