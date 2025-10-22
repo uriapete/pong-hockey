@@ -37,11 +37,26 @@ public class Paddle : MonoBehaviour
         //LEFT
         verticalMovementL = Input.GetAxis("VerticalL");
         Rigidbody2D lPaddleRB = paddleL.GetComponent<Rigidbody2D>();
-        lPaddleRB.AddForceY(verticalMovementL * acceleration);
+        lPaddleRB.AddForceY(verticalMovementL * acceleration * lPaddleRB.mass);
+
+        //RIGHT
+        verticalMovementR = Input.GetAxis("VerticalR");
+        Rigidbody2D rPaddleRB = paddleR.GetComponent<Rigidbody2D>();
+        rPaddleRB.AddForceY(verticalMovementR * acceleration * rPaddleRB.mass);
+        
+    }
+
+    void FixedUpdate()
+    {
+        //LEFT
+        verticalMovementL = Input.GetAxis("VerticalL");
+        Rigidbody2D lPaddleRB = paddleL.GetComponent<Rigidbody2D>();
+        
         if (Mathf.Abs(verticalMovementL) <= 0.01 && lPaddleRB.linearVelocity.magnitude > 0)
         {
-            lPaddleRB.linearDamping+=linDampDelta;
-        }else if (Mathf.Abs(verticalMovementL) > 0)
+            lPaddleRB.linearDamping += linDampDelta;
+        }
+        else if (Mathf.Abs(verticalMovementL) > 0)
         {
             lPaddleRB.linearDamping = 0;
         }
@@ -50,15 +65,16 @@ public class Paddle : MonoBehaviour
         //RIGHT
         verticalMovementR = Input.GetAxis("VerticalR");
         Rigidbody2D rPaddleRB = paddleR.GetComponent<Rigidbody2D>();
-        rPaddleRB.AddForceY(verticalMovementR * acceleration);
+        
         if (Mathf.Abs(verticalMovementR) <= 0.01 && rPaddleRB.linearVelocity.magnitude > 0)
         {
-            rPaddleRB.linearDamping+=linDampDelta;
+            rPaddleRB.linearDamping += linDampDelta;
         }
         else if (Mathf.Abs(verticalMovementR) > 0)
         {
             rPaddleRB.linearDamping = 0;
         }
         rPaddleRB.linearVelocity = Vector2.ClampMagnitude(rPaddleRB.linearVelocity, moveSpeed);
+
     }
 }
