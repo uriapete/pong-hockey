@@ -19,12 +19,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject mainMenu;
     public GameObject pauseMenu;
-<<<<<<< Updated upstream
-=======
+
     private bool isPaused;
     public bool gameActive;
 
->>>>>>> Stashed changes
+
     // what angle will the ball be served at next?
     private float servingAngle;
     
@@ -36,6 +35,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //main menu -- game does not start until play
         gameActive = false;
         PauseGame();
         pauseMenu.SetActive(false);
@@ -80,7 +80,15 @@ public class GameManager : MonoBehaviour
 
         if (gameActive && Input.GetKeyDown("escape"))      //pause the game
         {
-            PauseGame();
+            if (isPaused)
+            {
+                ResumeGameOrPreviousPage();
+            }
+            else
+            {
+                PauseGame();
+            }
+
         }
     }
 
@@ -144,20 +152,15 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()    //pause game; clock stops
     {
+        isPaused = true;
         Time.timeScale = 0f;
-<<<<<<< Updated upstream
-=======
         pauseMenu.transform.Find("PauseMainMenu").gameObject.SetActive(true);
->>>>>>> Stashed changes
         pauseMenu.SetActive(true);
     }
 
-    public void ResumeGame()    //resume game; clock resumes
+    public void ResumeGameOrPreviousPage()    //resume game; clock resumes
     {
-<<<<<<< Updated upstream
-        Time.timeScale = 1f;
-        pauseMenu.SetActive(false);
-=======
+
         gameActive = true;
         if (!pauseMenu.transform.Find("PauseSettingsMenu").gameObject.activeSelf)    //if settings menu is open, go back to main pause menu
         {
@@ -171,7 +174,7 @@ public class GameManager : MonoBehaviour
             pauseMenu.transform.Find("PauseMainMenu").gameObject.SetActive(true);
         }
         
->>>>>>> Stashed changes
+
     }
 
 }
