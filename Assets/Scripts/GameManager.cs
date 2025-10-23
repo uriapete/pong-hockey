@@ -153,6 +153,7 @@ public class GameManager : MonoBehaviour
     public void PauseGame()    //pause game; clock stops
     {
         isPaused = true;
+        isPaused = true;
         Time.timeScale = 0f;
         pauseMenu.transform.Find("PauseMainMenu").gameObject.SetActive(true);
         pauseMenu.SetActive(true);
