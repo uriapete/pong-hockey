@@ -14,12 +14,7 @@ public class Paddle : MonoBehaviour
     private float verticalMovementR;
 
 
-    private readonly float moveSpeed = 7.5f;
-
-    private readonly float acceleration = 50f;
-
-    private readonly float linDamp = 100f;
-    private readonly float linDampDelta = 5f;
+    private readonly float moveSpeed = 30f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,44 +32,14 @@ public class Paddle : MonoBehaviour
         //LEFT
         verticalMovementL = Input.GetAxis("VerticalL");
         Rigidbody2D lPaddleRB = paddleL.GetComponent<Rigidbody2D>();
-        lPaddleRB.AddForceY(verticalMovementL * acceleration * lPaddleRB.mass);
+
+        lPaddleRB.linearVelocityY= verticalMovementL * moveSpeed;
 
         //RIGHT
         verticalMovementR = Input.GetAxis("VerticalR");
         Rigidbody2D rPaddleRB = paddleR.GetComponent<Rigidbody2D>();
-        rPaddleRB.AddForceY(verticalMovementR * acceleration * rPaddleRB.mass);
-        
-    }
 
-    void FixedUpdate()
-    {
-        //LEFT
-        verticalMovementL = Input.GetAxis("VerticalL");
-        Rigidbody2D lPaddleRB = paddleL.GetComponent<Rigidbody2D>();
-        
-        if (Mathf.Abs(verticalMovementL) <= 0.01 && lPaddleRB.linearVelocity.magnitude > 0)
-        {
-            lPaddleRB.linearDamping += linDampDelta;
-        }
-        else if (Mathf.Abs(verticalMovementL) > 0)
-        {
-            lPaddleRB.linearDamping = 0;
-        }
-        lPaddleRB.linearVelocity = Vector2.ClampMagnitude(lPaddleRB.linearVelocity, moveSpeed);
-
-        //RIGHT
-        verticalMovementR = Input.GetAxis("VerticalR");
-        Rigidbody2D rPaddleRB = paddleR.GetComponent<Rigidbody2D>();
-        
-        if (Mathf.Abs(verticalMovementR) <= 0.01 && rPaddleRB.linearVelocity.magnitude > 0)
-        {
-            rPaddleRB.linearDamping += linDampDelta;
-        }
-        else if (Mathf.Abs(verticalMovementR) > 0)
-        {
-            rPaddleRB.linearDamping = 0;
-        }
-        rPaddleRB.linearVelocity = Vector2.ClampMagnitude(rPaddleRB.linearVelocity, moveSpeed);
+        rPaddleRB.linearVelocityY = verticalMovementR * moveSpeed;
 
     }
 }
