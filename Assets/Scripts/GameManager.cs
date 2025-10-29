@@ -17,8 +17,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI txtBoxL;
     public TextMeshProUGUI txtBoxR;
 
+    public GameObject mainMenu;
     public GameObject pauseMenu;
+
     private bool isPaused;
+    public bool gameActive;
+
 
     // what angle will the ball be served at next?
     private float servingAngle;
@@ -31,7 +35,11 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //main menu -- game does not start until play
+        gameActive = false;
+        PauseGame();
         pauseMenu.SetActive(false);
+        mainMenu.SetActive(true);
 
         scoreL = 0;
         scoreR = 0;
@@ -70,7 +78,7 @@ public class GameManager : MonoBehaviour
             ballRef.leftScored = false;
         }
 
-        if (Input.GetKeyDown("escape"))      //pause the game
+        if (gameActive && Input.GetKeyDown("escape"))      //pause the game
         {
             if (isPaused)
             {
@@ -80,7 +88,7 @@ public class GameManager : MonoBehaviour
             {
                 PauseGame();
             }
-                
+
         }
     }
 
@@ -142,17 +150,20 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void PauseGame()    //pause game; clock stops
+    public void PauseGame()    //pause game; clock stops
     {
         isPaused = true;
+        isPaused = true;
         Time.timeScale = 0f;
-        pauseMenu.transform.Find("MainMenu").gameObject.SetActive(true);
+        pauseMenu.transform.Find("PauseMainMenu").gameObject.SetActive(true);
         pauseMenu.SetActive(true);
     }
 
     public void ResumeGameOrPreviousPage()    //resume game; clock resumes
     {
-        if (!pauseMenu.transform.Find("SettingsMenu").gameObject.activeSelf)    //if settings menu is open, go back to main pause menu
+
+        gameActive = true;
+        if (!pauseMenu.transform.Find("PauseSettingsMenu").gameObject.activeSelf)    //if settings menu is open, go back to main pause menu
         {
             isPaused = false;
             Time.timeScale = 1f;
@@ -160,10 +171,11 @@ public class GameManager : MonoBehaviour
         }
         else     //if main menu is open, close pause menu and resume game
         {
-            pauseMenu.transform.Find("SettingsMenu").gameObject.SetActive(false);
-            pauseMenu.transform.Find("MainMenu").gameObject.SetActive(true);
+            pauseMenu.transform.Find("PauseSettingsMenu").gameObject.SetActive(false);
+            pauseMenu.transform.Find("PauseMainMenu").gameObject.SetActive(true);
         }
         
+
     }
 
 }
