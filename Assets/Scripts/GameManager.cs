@@ -143,14 +143,18 @@ public class GameManager : MonoBehaviour
     }
 
     //Resets the game
-    void GameOver()
+    public void GameOver()
     {
         
-            scoreL = 0;
-            scoreR = 0;
+        scoreL = 0;
+        scoreR = 0;
 
-            txtBoxL.text = scoreL.ToString();
-            txtBoxR.text = scoreR.ToString();
+        txtBoxL.text = scoreL.ToString();
+        txtBoxR.text = scoreR.ToString();
+
+        gameActive = false;
+        mainMenu.SetActive(true);
+
 
     }
 
