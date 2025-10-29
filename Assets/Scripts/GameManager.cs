@@ -89,6 +89,10 @@ public class GameManager : MonoBehaviour
                 PauseGame();
             }
 
+        } else if (!gameActive && Input.GetKeyDown("escape"))
+        {
+            mainMenu.transform.Find("SettingsMenu").gameObject.SetActive(false);
+            mainMenu.transform.Find("Menu").gameObject.SetActive(true);
         }
     }
 
