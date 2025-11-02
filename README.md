@@ -5,14 +5,30 @@
 ---
 
 **Air-Hockey** aka Pong-Hockey
-is a game development project aimed at learning the basics of Game Development and navigating Unity's Game Engine. The game itself will simulate a game of Air Hockey where 1-2 players are able to play. In its first iterations, we will recreate regular pong. Once we've reached the pong stage, we will then develop it further into its final stage, Air Hockey or Pong-Hockey.
+A game that simulates 7 rounds of 2D Air-Hockey. In its first official build iterations, we will recreate regular pong. Once we've completed the pong stage, we will then develop and transform it into its final stage, Air Hockey.
 
-## Game Manual
+## About
+This Unity project is a Work In Progress (WIP), founded by Peter Uriarte, Maria Trezha Von Bargen, and Julia Mitchell and will serve as project leads for this project. The goal of this project aimed at learning the basics of Game Development, navigating Unity's Game Engine, develop proficiency in C#, and working under team collaboration on GitHub. This project is beginner friendly and should cover the basics of scripting, game objects/prefabs, basic collisions, and more.
 
-### Controls
-- [insert control scheme]
+## Project Plans and Goals
 
-### Goal
+- Recreate Pong in Unity. (Paddle and Ball physics/interactions, Score System, Good Game Feeling)
+- Develop Pong into Air Hockey. (Hockey Paddle with expanded freedom of movement, Ball physics update, smaller goal hitboxes, Visual Overhaul to match Air Hockey Aesthetic)
+- Add a basic functional UI system (Main Menu, Pause Screen, Settings).
+- Add Music and Sound Effects.
+- Possibly add a cheat codes for silly modes. hehe.
+
+# Game Manual
+
+## Controls
+### Left Player:
+W - Move Paddle Up\
+S - Move Paddle Down\
+### Right Player:
+↑ Key - Move Paddle Up\
+↓ Key - Move Paddle Down\
+
+## Goal
 - Be the first player to win 7 rounds
 
 ---
@@ -26,27 +42,11 @@ is a game development project aimed at learning the basics of Game Development a
 
 ---
 
-## Play in Your Browser
+### Play in Your Browser
 
 Don't want to download? No problem!
 
 [**Play on Web Browser via this link**]([insert link])
-
----
-
-## About
-This Unity project is a Work In Progress (WIP). This was founded by Peter Uriarte, Maria Trezha Von Bargen, and Julia Mitchell and will serve as project leads for this project. The goal of this project is to learn how to navigate Unity's Game Engine, develop proficiency in C#, gain experience developing Video Games, and working under team collaboration. This project is beginner friendly and should cover the basics of scripting, game objects/prefabs, basic collisions, and more.
-
-
----
-
-## Project Plans and Goals
-
-- Recreate Pong in Unity. (Paddle and Ball physics/interactions, Score System)
-- Develop Pong into Air Hockey. (Hockey Paddle with expanded freedom of movement, and some additional tweaks)
-- Add a basic UI system (Main Menu, Pause Screen).
-- Add music and sound effects.
-- Possibly add a cheat code for a silly mode. hehe.
 
 ---
 
