@@ -52,4 +52,4 @@ Don't want to download? No problem!
 
 ## License
 
-Licensed under [GNU General Public License](LICENSE).
+Licensed under [to be addressed]
