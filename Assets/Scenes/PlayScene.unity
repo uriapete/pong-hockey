@@ -1901,7 +1901,7 @@ GameObject:
   - component: {fileID: 554194958}
   m_Layer: 0
   m_Name: RC_Right
-  m_TagString: Player
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3181,7 +3181,8 @@ MonoBehaviour:
   musicSource: {fileID: 1990234330}
   SFXSource: {fileID: 832718179}
   backgroundMusic: {fileID: 8300000, guid: e9dd00ead5b206644b809ac6b9e1f11a, type: 3}
-  paddleHitSFX: {fileID: 8300000, guid: 61d33470f5bafba4099cfccdbc80c498, type: 3}
+  paddleHit1SFX: {fileID: 8300000, guid: 61d33470f5bafba4099cfccdbc80c498, type: 3}
+  paddleHit2SFX: {fileID: 8300000, guid: e9c67bfdad11b624cbe77a9ec1c5372e, type: 3}
   scored1SFX: {fileID: 8300000, guid: 999e70fdad491884da737938d1cbf212, type: 3}
   scored2SFX: {fileID: 8300000, guid: d2ab2645ea7546140b50e458244e0f43, type: 3}
 --- !u!4 &1003852001
@@ -7591,7 +7592,7 @@ GameObject:
   - component: {fileID: 2044501289}
   m_Layer: 0
   m_Name: RC_Left
-  m_TagString: Player
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

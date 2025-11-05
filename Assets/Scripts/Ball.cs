@@ -91,9 +91,13 @@ public class Ball : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player1"))
         {
-            audioManager.PlaySFX(audioManager.paddleHitSFX);
+            audioManager.PlaySFX(audioManager.paddleHit1SFX);
+        }
+        else if (collision.gameObject.CompareTag("Player2"))
+        {
+            audioManager.PlaySFX(audioManager.paddleHit2SFX);
         }
     }
     

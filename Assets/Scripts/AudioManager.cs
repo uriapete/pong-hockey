@@ -11,7 +11,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource SFXSource;
     [Header("Audio Clip")]
     public AudioClip backgroundMusic;
-    public AudioClip paddleHitSFX;
+    public AudioClip paddleHit1SFX;
+    public AudioClip paddleHit2SFX;
     public AudioClip scored1SFX;
     public AudioClip scored2SFX;
 
