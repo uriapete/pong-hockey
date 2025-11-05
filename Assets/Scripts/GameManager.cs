@@ -154,8 +154,8 @@ public class GameManager : MonoBehaviour
 
         gameActive = false;
         mainMenu.SetActive(true);
-
-
+        pauseMenu.SetActive(false);
+        
     }
 
     public void PauseGame()    //pause game; clock stops
@@ -176,8 +176,9 @@ public class GameManager : MonoBehaviour
             isPaused = false;
             Time.timeScale = 1f;
             pauseMenu.SetActive(false);
+            mainMenu.SetActive(false);
         }
-        else     //if main menu is open, close pause menu and resume game
+        else     //if main pause menu is open, close pause menu and resume game
         {
             pauseMenu.transform.Find("PauseSettingsMenu").gameObject.SetActive(false);
             pauseMenu.transform.Find("PauseMainMenu").gameObject.SetActive(true);
