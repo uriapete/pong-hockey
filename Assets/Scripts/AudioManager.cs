@@ -18,4 +18,9 @@ public class AudioManager : MonoBehaviour
         musicSource.clip = backgroundMusic;
         musicSource.Play();
     }
+
+    public void UpdateVolume(System.Single volume)
+    {
+        musicSource.volume = volume;
+    }
 }
