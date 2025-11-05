@@ -152,6 +152,8 @@ public class GameManager : MonoBehaviour
         txtBoxL.text = scoreL.ToString();
         txtBoxR.text = scoreR.ToString();
 
+        ballRef.StartNewRound(servingAngle);
+
         gameActive = false;
         mainMenu.SetActive(true);
         pauseMenu.SetActive(false);
