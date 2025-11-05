@@ -12,10 +12,30 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Clip")]
     public AudioClip backgroundMusic;
     public AudioClip paddleHitSFX;
+    public AudioClip scored1SFX;
+    public AudioClip scored2SFX;
 
     void Start()
     {
         musicSource.clip = backgroundMusic;
         musicSource.Play();
+    }
+
+    void Awake() //this insures that the audio manager doesn't duplicate itself on awake
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void PlaySFX(AudioClip clip)
+    {
+        SFXSource.PlayOneShot(clip);
     }
 }

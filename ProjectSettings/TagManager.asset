@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LeftWallTag
   - RightWallTag
+  - Audio
   layers:
   - Default
   - TransparentFX
