@@ -11,7 +11,10 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource SFXSource;
     [Header("Audio Clip")]
     public AudioClip backgroundMusic;
-    public AudioClip paddleHitSFX;
+    public AudioClip paddleHit1SFX;
+    public AudioClip paddleHit2SFX;
+    public AudioClip scored1SFX;
+    public AudioClip scored2SFX;
 
     void Start()
     {
@@ -22,5 +25,23 @@ public class AudioManager : MonoBehaviour
     public void UpdateVolume(System.Single volume)
     {
         musicSource.volume = volume;
+    }
+    
+    void Awake() //this insures that the audio manager doesn't duplicate itself on awake
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void PlaySFX(AudioClip clip)
+    {
+        SFXSource.PlayOneShot(clip);
     }
 }

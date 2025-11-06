@@ -17,6 +17,7 @@ public class Ball : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public bool rightScored = false;
     public bool leftScored = false;
+    AudioManager audioManager;
 
 
     void Start()
@@ -26,6 +27,11 @@ public class Ball : MonoBehaviour
 
         // serve the ball.
         StartNewRound(StartServeAngle);
+    }
+
+    void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     // inits the ball with a starting velocity.
@@ -74,10 +80,24 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.CompareTag("LeftWallTag"))
         {
             rightScored = true;
+            audioManager.PlaySFX(audioManager.scored1SFX);
         }
         else if (collision.gameObject.CompareTag("RightWallTag"))
         {
             leftScored = true;
+            audioManager.PlaySFX(audioManager.scored2SFX);
+        }
+        
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player1"))
+        {
+            audioManager.PlaySFX(audioManager.paddleHit1SFX);
+        }
+        else if (collision.gameObject.CompareTag("Player2"))
+        {
+            audioManager.PlaySFX(audioManager.paddleHit2SFX);
         }
     }
     
