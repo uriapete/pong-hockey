@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject mainMenu;
     public GameObject pauseMenu;
+    public GameObject settingsMenu;
 
     private bool isPaused;
     public bool gameActive;
@@ -91,7 +92,7 @@ public class GameManager : MonoBehaviour
 
         } else if (!gameActive && Input.GetKeyDown("escape"))
         {
-            mainMenu.transform.Find("SettingsMenu").gameObject.SetActive(false);
+            settingsMenu.SetActive(false);
             mainMenu.transform.Find("Menu").gameObject.SetActive(true);
         }
     }
@@ -152,8 +153,11 @@ public class GameManager : MonoBehaviour
         txtBoxL.text = scoreL.ToString();
         txtBoxR.text = scoreR.ToString();
 
+        ballRef.StartNewRound(servingAngle);
+
         gameActive = false;
         mainMenu.SetActive(true);
+        pauseMenu.SetActive(false);
 
 
     }
@@ -170,20 +174,27 @@ public class GameManager : MonoBehaviour
     public void ResumeGameOrPreviousPage()    //resume game; clock resumes
     {
 
-        gameActive = true;
-        if (!pauseMenu.transform.Find("PauseSettingsMenu").gameObject.activeSelf)    //if settings menu is open, go back to main pause menu
+        if (!settingsMenu.activeSelf)    //if settings menu is closed, close pause menu and resume game
         {
             isPaused = false;
             Time.timeScale = 1f;
             pauseMenu.SetActive(false);
+            mainMenu.SetActive(false);
+
+            gameActive = true;
         }
-        else     //if main menu is open, close pause menu and resume game
+        else if (gameActive)    //if settings menu is open while game is active, go back to pause menu
         {
-            pauseMenu.transform.Find("PauseSettingsMenu").gameObject.SetActive(false);
+            settingsMenu.SetActive(false);
             pauseMenu.transform.Find("PauseMainMenu").gameObject.SetActive(true);
         }
-        
+        else     //if settings menu is open while game not active, go back to main menu
+        {
+            settingsMenu.SetActive(false);
+            mainMenu.transform.Find("Menu").gameObject.SetActive(true);
+        }
 
+        
     }
 
     public void QuitGame()
