@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
 
     public GameObject mainMenu;
     public GameObject pauseMenu;
-    public GameObject settingsMenu;
 
     private bool isPaused;
     public bool gameActive;
@@ -92,7 +91,7 @@ public class GameManager : MonoBehaviour
 
         } else if (!gameActive && Input.GetKeyDown("escape"))
         {
-            settingsMenu.SetActive(false);
+            mainMenu.transform.Find("SettingsMenu").gameObject.SetActive(false);
             mainMenu.transform.Find("Menu").gameObject.SetActive(true);
         }
     }
@@ -153,12 +152,10 @@ public class GameManager : MonoBehaviour
         txtBoxL.text = scoreL.ToString();
         txtBoxR.text = scoreR.ToString();
 
-        ballRef.StartNewRound(servingAngle);
-
         gameActive = false;
         mainMenu.SetActive(true);
-        pauseMenu.SetActive(false);
-        
+
+
     }
 
     public void PauseGame()    //pause game; clock stops
@@ -173,26 +170,19 @@ public class GameManager : MonoBehaviour
     public void ResumeGameOrPreviousPage()    //resume game; clock resumes
     {
 
-        
-        if (!settingsMenu.activeSelf)    //if settings menu is closed, close pause menu and resume game
+        gameActive = true;
+        if (!pauseMenu.transform.Find("PauseSettingsMenu").gameObject.activeSelf)    //if settings menu is open, go back to main pause menu
         {
             isPaused = false;
             Time.timeScale = 1f;
             pauseMenu.SetActive(false);
-            mainMenu.SetActive(false);
         }
-        else if (gameActive)    //if settings menu is open while game is active, go back to main pause menu
+        else     //if main menu is open, close pause menu and resume game
         {
-            settingsMenu.SetActive(false);
+            pauseMenu.transform.Find("PauseSettingsMenu").gameObject.SetActive(false);
             pauseMenu.transform.Find("PauseMainMenu").gameObject.SetActive(true);
         }
-        else   //if settings menu is open while game not active, go back to main pause menu
-        {
-            settingsMenu.SetActive(false);
-            mainMenu.transform.Find("Menu").gameObject.SetActive(true);
-        }
-
-            gameActive = true;
+        
 
     }
 
