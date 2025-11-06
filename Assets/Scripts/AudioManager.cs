@@ -39,4 +39,10 @@ public class AudioManager : MonoBehaviour
     {
         SFXSource.PlayOneShot(clip);
     }
+
+    // updates volume to provided when called
+    public void UpdateVolume(System.Single volume)
+    {
+        musicSource.volume = volume;
+    }
 }
