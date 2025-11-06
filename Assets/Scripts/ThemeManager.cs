@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ThemeManager : MonoBehaviour
 {
-    [Header("Renderers")]
+    [Header("Renderers")]   
     public SpriteRenderer background;
     public SpriteRenderer ball;
     public SpriteRenderer paddleR;
