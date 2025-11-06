@@ -5,19 +5,24 @@ using UnityEngine.UI;
 
 public class ThemeManager : MonoBehaviour
 {
+    [Header("Renderers")]
     public SpriteRenderer background;
     public SpriteRenderer ball;
     public SpriteRenderer paddleR;
     public SpriteRenderer paddleL;
 
-    public static Sprite windowsxpBG;
-    public static Sprite dvdLogo;
-    public static Sprite goldDvdLogo;
+    [Header("Themes: [Background, Ball, Paddle]")]
 
+    [Header("Default")]
+    public Sprite[] defaultTheme;
 
-    public Sprite[] defaultTheme = { windowsxpBG, dvdLogo, goldDvdLogo};
-// Start is called once before the first execution of Update after the MonoBehaviour is created
-void Start()
+    [Header("Gold")]
+    public Sprite[] goldTheme;
+
+    [Header("Halloween")]
+    public Sprite[] halloweenTheme;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
 
        
@@ -25,7 +30,7 @@ void Start()
         
 
 
-        ChangeTheme(0);
+        PickTheme(0);
     }
 
     // Update is called once per frame
@@ -34,7 +39,7 @@ void Start()
         
     }
 
-    void ChangeTheme(int themeId)
+    public void PickTheme(int themeId)
     {
         switch (themeId)
         {
@@ -42,7 +47,10 @@ void Start()
                 ChangeSprites(defaultTheme);
                 break;
             case 1:
+                ChangeSprites(goldTheme);
+                break;
 
+            case 2:
                 break;
 
             default:
@@ -54,7 +62,9 @@ void Start()
         }
     }
 
-    void ChangeSprites(Sprite[] theme)
+    
+
+    public void ChangeSprites(Sprite[] theme)
     {
         background.sprite = theme[0];
         ball.sprite = theme[1];
