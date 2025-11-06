@@ -5,14 +5,25 @@ using UnityEngine.UI;
 
 public class ThemeManager : MonoBehaviour
 {
-    [Header("Renderers")]   
+<<<<<<< Updated upstream
+    [Header("Renderers")]
+=======
+    [Header("Renderers")]   //objects themselves
+>>>>>>> Stashed changes
     public SpriteRenderer background;
     public SpriteRenderer ball;
     public SpriteRenderer paddleR;
     public SpriteRenderer paddleL;
 
+<<<<<<< Updated upstream
     [Header("Themes: [Background, Ball, Paddle]")]
 
+=======
+    [Header("Themes: [Background, Ball, Paddle]")]  //NOTE: ORDER THEM CORRECTLY IN EDITOR; ASSIGNS SPRITE BY ORDER IN ARRAY
+
+    
+    //sprites to apply to objects;
+>>>>>>> Stashed changes
     [Header("Default")]
     public Sprite[] defaultTheme;
 
@@ -39,7 +50,12 @@ public class ThemeManager : MonoBehaviour
         
     }
 
+<<<<<<< Updated upstream
     public void PickTheme(int themeId)
+=======
+    
+    public void PickTheme(int themeId)  //each theme corresponds to an int, so input int to change theme
+>>>>>>> Stashed changes
     {
         switch (themeId)
         {
@@ -63,8 +79,12 @@ public class ThemeManager : MonoBehaviour
     }
 
     
+<<<<<<< Updated upstream
 
     public void ChangeSprites(Sprite[] theme)
+=======
+    public void ChangeSprites(Sprite[] theme)   //each theme is an array of sprites, so sets each sprite in order
+>>>>>>> Stashed changes
     {
         background.sprite = theme[0];
         ball.sprite = theme[1];
