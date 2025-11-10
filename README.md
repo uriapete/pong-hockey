@@ -7,7 +7,7 @@
 A game that simulates 7 rounds of 2D Air-Hockey. In its first official build iterations, we will recreate regular pong. Once we've completed the pong stage, we will then develop and transform it into its final stage, Air Hockey.
 
 ## About
-This project is built for Unity Engine version `6000.0.58f1`. You can find and install this version from their [archives](https://unity.com/releases/editor/archive) page.
+This project is built for Unity Engine version `6000.2.58f1`. You can find and install this version from their [archives](https://unity.com/releases/editor/archive) page.
 
 This project is currently a Work In Progress (WIP). 
 
@@ -39,10 +39,10 @@ Currently, no license has been applied to the project yet.
 ## Controls
 ### Left Player:
 W - Move Paddle Up\
-S - Move Paddle Down\
+S - Move Paddle Down
 ### Right Player:
 ↑ Key - Move Paddle Up\
-↓ Key - Move Paddle Down\
+↓ Key - Move Paddle Down
 
 ## Goal
 Be the first player to win 7 rounds
