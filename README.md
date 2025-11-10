@@ -4,11 +4,25 @@
 
 ---
 
-**Air-Hockey** aka Pong-Hockey
 A game that simulates 7 rounds of 2D Air-Hockey. In its first official build iterations, we will recreate regular pong. Once we've completed the pong stage, we will then develop and transform it into its final stage, Air Hockey.
 
 ## About
-This Unity project is a Work In Progress (WIP), founded by Peter Uriarte, Maria Trezha Von Bargen, and Julia Mitchell and will serve as project leads for this project. The goal of this project aimed at learning the basics of Game Development, navigating Unity's Game Engine, develop proficiency in C#, and working under team collaboration on GitHub. This project is beginner friendly and should cover the basics of scripting, game objects/prefabs, basic collisions, and more.
+This project is built for Unity Engine version `6000.0.58f1`. You can find and install this version from their [archives](https://unity.com/releases/editor/archive) page.
+
+This project is currently a Work In Progress (WIP). 
+
+The goal for contributers of this project is to get everyone started learning the basics of Game Development, navigating Unity's Game Engine, developing proficiency in C#, and working under team collaboration on GitHub. This project is beginner friendly and should cover the basics of scripting, game objects/prefabs, basic collisions, and more.
+
+### Leadership
+
+The project leads and founders are:
+- Peter Uriarte
+- Maria Trezha Von Bargen
+- Julia Mitchell
+
+### License
+
+Currently, no license has been applied to the project yet.
 
 ## Project Plans and Goals
 
@@ -17,6 +31,8 @@ This Unity project is a Work In Progress (WIP), founded by Peter Uriarte, Maria 
 - Add a basic functional UI system (Main Menu, Pause Screen, Settings).
 - Add Music and Sound Effects.
 - Possibly add a cheat codes for silly modes. hehe.
+
+---
 
 # Game Manual
 
@@ -29,7 +45,7 @@ S - Move Paddle Down\
 ↓ Key - Move Paddle Down\
 
 ## Goal
-- Be the first player to win 7 rounds
+Be the first player to win 7 rounds
 
 ---
 
@@ -40,16 +56,15 @@ S - Move Paddle Down\
 3. Extract files into a folder.
 4. Open the executable(.exe) file.
 
----
-
-### Play in Your Browser
+### Alternatively: Play in Your Browser
+<!-- UNCOMMENT WHEN READY TO ADD LINK
 
 Don't want to download? No problem!
 
-[**Play on Web Browser via this link**]([insert link])
+**[Play on Web Browser via this link](#)**
+-->
+Currently there is no browser link yet. This will be added shortly.
 
 ---
 
-## License
 
-Licensed under [to be addressed]
