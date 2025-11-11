@@ -5,6 +5,9 @@ public class Ball : MonoBehaviour
 {
     public float Speed { get; private set; } = 5;
 
+    // The amount of times the ball has hit a paddle. Gets reset each round.
+    private int bounceCount = 0;
+
     // how many seconds it takes from the ball placed on the board to being served.
     private float SecondsUntilServe { get; } = 2.5F;
 
@@ -75,6 +78,7 @@ public class Ball : MonoBehaviour
         StartCoroutine(NewRoundCoroutine(ang));
     }
 
+    // Called when the ball is missed, and falls into the pit (i.e. when a point is lost)
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("LeftWallTag"))
@@ -89,6 +93,7 @@ public class Ball : MonoBehaviour
         }
         
     }
+    // Called when the ball bounces on either paddle
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player1"))
@@ -99,8 +104,34 @@ public class Ball : MonoBehaviour
         {
             audioManager.PlaySFX(audioManager.paddleHit2SFX);
         }
+
+        // Increase this bounce count every time we hit a paddle
+        bounceCount++;
+
+        //Set the speed multiplier
+        // [0, 10) bounces
+        float speedMult = 1.50f;
+        // [10, 15) bounces
+        if(bounceCount >= 10) {
+            speedMult = 1.20f;
+        }
+        // [15, 20) bounces
+        if(bounceCount >= 15) {
+            speedMult = 1.10f;
+        }
+        // [20, +inf) bounces
+        if(bounceCount >= 20) {
+            speedMult = 1.05f;
+        }
+
+        // Increase the speed every 5 paddle bounces
+        if (bounceCount % 5 == 0) {
+            ballRB.linearVelocity = ballRB.linearVelocity * speedMult;
+        }
+
+
     }
-    
+
     // Update is called once per frame
     void Update()
     {
