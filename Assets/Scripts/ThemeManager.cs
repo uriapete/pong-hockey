@@ -13,7 +13,7 @@ public class ThemeManager : MonoBehaviour
     public SpriteRenderer paddleL;
 
 
-    [Header("Sprite Themes: [Background, Ball, Paddle]")]  //NOTE: ORDER THEM CORRECTLY IN EDITOR; ASSIGNS SPRITE BY ORDER IN ARRAY
+    [Header("Sprite Themes: [Background, Ball, PaddleR, PaddleL]")]  //NOTE: ORDER THEM CORRECTLY IN EDITOR; ASSIGNS SPRITE BY ORDER IN ARRAY
    
     private Sprite[] chosenTheme;
 
@@ -43,7 +43,7 @@ public class ThemeManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     { 
-        PickTheme(0);
+        PickTheme(2);
     }
 
     // Update is called once per frame
@@ -67,7 +67,7 @@ public class ThemeManager : MonoBehaviour
                 break;
 
             case 2:
-                //chosenTheme = ;
+                chosenTheme = halloweenTheme;
                 //chosenSound = ;
                 break;
 
@@ -100,7 +100,7 @@ public class ThemeManager : MonoBehaviour
         background.sprite = theme[0];
         ball.sprite = theme[1];
         paddleL.sprite = theme[2];
-        paddleR.sprite = theme[2];
+        paddleR.sprite = theme[3];
 
         //music = sound[0]
         //SFX = sound[1]
