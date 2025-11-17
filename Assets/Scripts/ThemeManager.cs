@@ -28,7 +28,8 @@ public class ThemeManager : MonoBehaviour
     [Header("Halloween")]
     public Sprite[] halloweenTheme;
 
-
+    // temporary id variable for pre-ui testing.
+    private int TEMPThemeID = 0;
 
    /* [Header("Sound: [Music, SFX]")]
    private SOUND[] chosenSound;
