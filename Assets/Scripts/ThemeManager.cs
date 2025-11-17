@@ -50,7 +50,13 @@ public class ThemeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // switches theme on space
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ++TEMPThemeID;
+            TEMPThemeID%=3;
+            PickTheme(TEMPThemeID);
+        }
     }
 
 
