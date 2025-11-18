@@ -28,7 +28,8 @@ public class ThemeManager : MonoBehaviour
     [Header("Halloween")]
     public Sprite[] halloweenTheme;
 
-
+    // temporary id variable for pre-ui testing.
+    private int TEMPThemeID = 0;
 
    /* [Header("Sound: [Music, SFX]")]
    private SOUND[] chosenSound;
@@ -43,13 +44,19 @@ public class ThemeManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     { 
-        PickTheme(2);
+        PickTheme(TEMPThemeID);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // switches theme on space
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ++TEMPThemeID;
+            TEMPThemeID%=3;
+            PickTheme(TEMPThemeID);
+        }
     }
 
 
