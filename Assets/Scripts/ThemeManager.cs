@@ -114,7 +114,10 @@ public class ThemeManager : MonoBehaviour
     // implements the provided theme.
     public void ChangeTheme(Theme theme)
     {
-        
+        background.sprite = theme.Background;
+        ball.sprite = theme.Ball;
+        paddleL.sprite = theme.Paddle;
+        paddleR.sprite = theme.Paddle;
     }
 
     public void ChangeTheme(Sprite[] theme)   //each theme is an array of sprites, so sets each sprite in order
