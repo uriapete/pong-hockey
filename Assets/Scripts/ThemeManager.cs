@@ -17,6 +17,9 @@ public class ThemeManager : MonoBehaviour
    
     private Sprite[] chosenTheme;
 
+    // current theme selected.
+    private Theme currentTheme;
+
     // array of themes to choose from.
     // selected in editor.
     [Header("Themes")]
