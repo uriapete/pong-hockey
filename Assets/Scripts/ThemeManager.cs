@@ -70,7 +70,7 @@ public class ThemeManager : MonoBehaviour
     // takes a theme, implements into play
     public void PickTheme(Theme theme)
     {
-        
+        currentTheme = theme;
     }
     public void PickTheme(int themeId)  //each theme corresponds to an int, so input int to change theme
     {
