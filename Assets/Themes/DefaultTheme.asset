@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7316fd79662534637910d24228f95674, type: 3}
   m_Name: DefaultTheme
   m_EditorClassIdentifier: Assembly-CSharp::Theme
-  Background: {fileID: 0}
-  Ball: {fileID: 0}
-  PaddleR: {fileID: 0}
-  PaddleL: {fileID: 0}
+  Name: Default
+  Background: {fileID: -2456250800155162661, guid: 6a1d91b1ab2ec39488835bd39bf4c355, type: 3}
+  Ball: {fileID: 1952258401829744170, guid: f7d2321f542b54f4793df430ba5c028a, type: 3}
+  PaddleR: {fileID: 6528055498615950045, guid: 7b27d021977dbf246ba360728d41ff2b, type: 3}
+  PaddleL: {fileID: 6528055498615950045, guid: 7b27d021977dbf246ba360728d41ff2b, type: 3}
