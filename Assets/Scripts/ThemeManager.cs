@@ -111,7 +111,11 @@ public class ThemeManager : MonoBehaviour
         //ChangeTheme(chosenTheme, chosenSound);
     }
 
-    
+    // implements the provided theme.
+    public void ChangeTheme(Theme theme)
+    {
+        
+    }
 
     public void ChangeTheme(Sprite[] theme)   //each theme is an array of sprites, so sets each sprite in order
     //chosenTheme(Sprite[] theme, SOUND[] sound)
