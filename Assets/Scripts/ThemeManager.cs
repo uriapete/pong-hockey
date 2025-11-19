@@ -71,6 +71,7 @@ public class ThemeManager : MonoBehaviour
     public void PickTheme(Theme theme)
     {
         currentTheme = theme;
+        ChangeTheme(currentTheme);
     }
     public void PickTheme(int themeId)  //each theme corresponds to an int, so input int to change theme
     {
