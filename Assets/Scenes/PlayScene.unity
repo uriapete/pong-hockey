@@ -1209,7 +1209,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 394662709}
         m_TargetAssemblyTypeName: ResolutionManager, Assembly-CSharp
-        m_MethodName: SetResolution
+        m_MethodName: ApplyResolution
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1696,8 +1696,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 394662709}
         m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
-        m_MethodName: SetFullScreen
-        m_Mode: 0
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
