@@ -9,6 +9,5 @@ public class Theme : ScriptableObject
     // The Sprites that will be used for the specified objects.
     public Sprite Background;
     public Sprite Ball;
-    public Sprite PaddleR;
-    public Sprite PaddleL;
+    public Sprite Paddle;
 }
