@@ -52,6 +52,7 @@ public class AudioManager : MonoBehaviour
         
     }
 
+    //updates SFX volume to provided when called
     public void UpdateSFXVolume(System.Single volume)
     {
         SFXSource.volume = volume;

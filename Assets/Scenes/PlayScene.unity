@@ -521,7 +521,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1003852000}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: UpdateSFXVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &187326539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,7 +2001,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2454,6 +2466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicSource: {fileID: 1990234330}
   SFXSource: {fileID: 832718179}
+  volumeSlider: {fileID: 0}
   backgroundMusic: {fileID: 8300000, guid: e9dd00ead5b206644b809ac6b9e1f11a, type: 3}
   paddleHit1SFX: {fileID: 8300000, guid: 61d33470f5bafba4099cfccdbc80c498, type: 3}
   paddleHit2SFX: {fileID: 8300000, guid: e9c67bfdad11b624cbe77a9ec1c5372e, type: 3}
