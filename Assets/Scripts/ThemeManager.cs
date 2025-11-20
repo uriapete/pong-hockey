@@ -14,8 +14,6 @@ public class ThemeManager : MonoBehaviour
 
 
     [Header("Sprite Themes: [Background, Ball, PaddleR, PaddleL]")]  //NOTE: ORDER THEM CORRECTLY IN EDITOR; ASSIGNS SPRITE BY ORDER IN ARRAY
-   
-    private Sprite[] chosenTheme;
 
     // current theme selected.
     private Theme currentTheme;
