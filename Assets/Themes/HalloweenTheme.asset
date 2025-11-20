@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7316fd79662534637910d24228f95674, type: 3}
+  m_Name: HalloweenTheme
+  m_EditorClassIdentifier: Assembly-CSharp::Theme
+  Name: Halloween
+  Background: {fileID: 1902536243086992199, guid: 4afe8d7912f2ce544aed52a5324d8acd, type: 3}
+  Ball: {fileID: -8446259436268857031, guid: 5b17171a9273a154394655145f655cac, type: 3}
+  Paddle: {fileID: -6214581826130391414, guid: 97e462c81d522c448b917b65b4ee1448, type: 3}

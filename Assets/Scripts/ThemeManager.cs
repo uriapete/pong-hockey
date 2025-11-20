@@ -14,8 +14,14 @@ public class ThemeManager : MonoBehaviour
 
 
     [Header("Sprite Themes: [Background, Ball, PaddleR, PaddleL]")]  //NOTE: ORDER THEM CORRECTLY IN EDITOR; ASSIGNS SPRITE BY ORDER IN ARRAY
-   
-    private Sprite[] chosenTheme;
+
+    // current theme selected.
+    private Theme currentTheme;
+
+    // array of themes to choose from.
+    // selected in editor.
+    [Header("Themes")]
+    public Theme[] themes;
 
 
     //sprites to apply to objects;
@@ -54,62 +60,28 @@ public class ThemeManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ++TEMPThemeID;
-            TEMPThemeID%=3;
+            TEMPThemeID%=themes.Length;
             PickTheme(TEMPThemeID);
         }
     }
 
-
+    // takes a theme, implements into play
+    public void PickTheme(Theme theme)
+    {
+        currentTheme = theme;
+        ChangeTheme(currentTheme);
+    }
     public void PickTheme(int themeId)  //each theme corresponds to an int, so input int to change theme
     {
-        switch (themeId)
-        {
-            case 0:
-                chosenTheme = defaultTheme;
-                //chosenSound = defaultSound;
-                break;
-            case 1:
-                chosenTheme = goldTheme;
-                //chosenSound = goldSound;
-                break;
-
-            case 2:
-                chosenTheme = halloweenTheme;
-                //chosenSound = ;
-                break;
-
-            case 3:
-                //chosenTheme =
-                //chosenSound = ;
-                break;
-
-            case 4:
-                //chosenTheme = ;
-                //chosenSound = ;
-                break;
-
-            default:
-                chosenTheme = defaultTheme;
-                //chosenSound = defaultSound;
-                break;
-
-        }
-
-        ChangeTheme(chosenTheme);
-        //ChangeTheme(chosenTheme, chosenSound);
+        PickTheme(themes[themeId]);
     }
 
-    
-
-    public void ChangeTheme(Sprite[] theme)   //each theme is an array of sprites, so sets each sprite in order
-    //chosenTheme(Sprite[] theme, SOUND[] sound)
+    // implements the provided theme.
+    public void ChangeTheme(Theme theme)
     {
-        background.sprite = theme[0];
-        ball.sprite = theme[1];
-        paddleL.sprite = theme[2];
-        paddleR.sprite = theme[3];
-
-        //music = sound[0]
-        //SFX = sound[1]
+        background.sprite = theme.Background;
+        ball.sprite = theme.Ball;
+        paddleL.sprite = theme.Paddle;
+        paddleR.sprite = theme.Paddle;
     }
 }

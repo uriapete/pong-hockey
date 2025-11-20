@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7316fd79662534637910d24228f95674, type: 3}
+  m_Name: GoldTheme
+  m_EditorClassIdentifier: Assembly-CSharp::Theme
+  Name: Gold
+  Background: {fileID: 8073766125650387101, guid: 191e75db06f357d40b4bc586264f44b8, type: 3}
+  Ball: {fileID: 6865204995940206256, guid: 3b3fb2a4f58239740b0867c74c2359f5, type: 3}
+  Paddle: {fileID: 6877047070534625121, guid: 224f0bd5e99198f478fd0db5154e62be, type: 3}
