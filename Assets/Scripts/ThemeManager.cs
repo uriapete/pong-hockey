@@ -37,13 +37,12 @@ public class ThemeManager : MonoBehaviour
     // temporary id variable for pre-ui testing.
     private int TEMPThemeID = 0;
 
-   /* [Header("Sound: [Music, SFX]")]
+   [Header("Sound: [Music, SFX]")]
    private SOUND[] chosenSound;
 
-   public SOUND[] defaultSound
-   public SOUND[] goldSound
-   public SOUND[] halloweenSound
-   */
+   public SOUND[] defaultSound;
+   public SOUND[] goldSound;
+   public SOUND[] halloweenSound;
 
 
 
