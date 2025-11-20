@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -21,6 +22,9 @@ public class Ball : MonoBehaviour
     public bool rightScored = false;
     public bool leftScored = false;
     AudioManager audioManager;
+
+    Color randColor;
+    SpriteRenderer spriteRenderer;
 
 
     void Start()
@@ -96,6 +100,12 @@ public class Ball : MonoBehaviour
     // Called when the ball bounces on either paddle
     void OnCollisionEnter2D(Collision2D collision)
     {
+        Random random1 = new Random().NextDouble();
+        Random random2 = new Random().NextDouble();
+        Random random3 = new Random().NextDouble();
+        randColor = new Color(random1, random2, random3);
+        spriteRenderer.color = randColor;
+
         if (collision.gameObject.CompareTag("Player1"))
         {
             audioManager.PlaySFX(audioManager.paddleHit1SFX);
