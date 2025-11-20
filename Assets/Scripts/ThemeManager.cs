@@ -86,16 +86,4 @@ public class ThemeManager : MonoBehaviour
         paddleL.sprite = theme.Paddle;
         paddleR.sprite = theme.Paddle;
     }
-
-    public void ChangeTheme(Sprite[] theme)   //each theme is an array of sprites, so sets each sprite in order
-    //chosenTheme(Sprite[] theme, SOUND[] sound)
-    {
-        background.sprite = theme[0];
-        ball.sprite = theme[1];
-        paddleL.sprite = theme[2];
-        paddleR.sprite = theme[3];
-
-        //music = sound[0]
-        //SFX = sound[1]
-    }
 }
