@@ -2395,6 +2395,8 @@ MonoBehaviour:
   paddleL: {fileID: 2044501285}
   themes:
   - {fileID: 11400000, guid: 8eee69270eb7f44aea95f8b7f3baf82d, type: 2}
+  - {fileID: 11400000, guid: 73c06d828b73a451c9b6a0626d00239e, type: 2}
+  - {fileID: 11400000, guid: 799d3cc563cfd40ea87795bb70e5ec0e, type: 2}
   defaultTheme:
   - {fileID: -2456250800155162661, guid: 6a1d91b1ab2ec39488835bd39bf4c355, type: 3}
   - {fileID: 1952258401829744170, guid: f7d2321f542b54f4793df430ba5c028a, type: 3}
