@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using System.Collections;
+using System.Drawing;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -10,16 +12,19 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
     [Header("Audio Clip")]
+    [SerializeField] Slider volumeSlider;
     public AudioClip backgroundMusic;
     public AudioClip paddleHit1SFX;
     public AudioClip paddleHit2SFX;
     public AudioClip scored1SFX;
     public AudioClip scored2SFX;
 
+
     void Start()
     {
         musicSource.clip = backgroundMusic;
         musicSource.Play();
+        
     }
 
     void Awake() //this insures that the audio manager doesn't duplicate itself on awake
@@ -41,8 +46,18 @@ public class AudioManager : MonoBehaviour
     }
 
     // updates volume to provided when called
-    public void UpdateVolume(System.Single volume)
+    public void UpdateMusicVolume(System.Single volume)
     {
         musicSource.volume = volume;
+        
     }
+
+    public void UpdateSFXVolume(System.Single volume)
+    {
+        SFXSource.volume = volume;
+        
+    }
+
+
+
 }
