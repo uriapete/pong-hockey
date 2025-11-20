@@ -75,41 +75,7 @@ public class ThemeManager : MonoBehaviour
     }
     public void PickTheme(int themeId)  //each theme corresponds to an int, so input int to change theme
     {
-        switch (themeId)
-        {
-            case 0:
-                chosenTheme = defaultTheme;
-                //chosenSound = defaultSound;
-                break;
-            case 1:
-                chosenTheme = goldTheme;
-                //chosenSound = goldSound;
-                break;
-
-            case 2:
-                chosenTheme = halloweenTheme;
-                //chosenSound = ;
-                break;
-
-            case 3:
-                //chosenTheme =
-                //chosenSound = ;
-                break;
-
-            case 4:
-                //chosenTheme = ;
-                //chosenSound = ;
-                break;
-
-            default:
-                chosenTheme = defaultTheme;
-                //chosenSound = defaultSound;
-                break;
-
-        }
-
-        ChangeTheme(chosenTheme);
-        //ChangeTheme(chosenTheme, chosenSound);
+        PickTheme(themes[themeId]);
     }
 
     // implements the provided theme.
