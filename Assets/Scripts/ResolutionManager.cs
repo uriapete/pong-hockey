@@ -17,7 +17,6 @@ public class ResolutionManager : MonoBehaviour
 
     void Start()
     {
-        FullscreenToggle();
         //
     }
 
@@ -25,12 +24,30 @@ public class ResolutionManager : MonoBehaviour
     void Awake()
     {
         SetupAvailableResolutions();
+        FullscreenToggle();
         //
     }
 
     void FullscreenToggle()
     {
+        if (Screen.fullScreenMode == FullScreenMode.FullScreenWindow || 
+            Screen.fullScreenMode == FullScreenMode.ExclusiveFullScreen)
+        {
+            fullscreenToggle.isOn = true;
+        }
+        else
+        {
+            fullscreenToggle.isOn = false;
+        }
         //
+    }
+
+    public void SetFullscreen(bool isFullscreen)
+    {
+        int currentWidth = Screen.width;
+        int currentHeight = Screen.height;
+
+        FullScreenMode targetMode = isFullscreen ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed;
     }
 
     void SetupAvailableResolutions()
