@@ -60,7 +60,7 @@ public class ThemeManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ++TEMPThemeID;
-            TEMPThemeID%=3;
+            TEMPThemeID%=themes.Length;
             PickTheme(TEMPThemeID);
         }
     }
