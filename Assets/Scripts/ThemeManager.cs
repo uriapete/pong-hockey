@@ -88,6 +88,10 @@ public class ThemeManager : MonoBehaviour
         
         // sets audio.
         audioManager.backgroundMusic=theme.BackgroundMusic;
+        
+        // play new bgm.
+        audioManager.StartBGM();
+        
         audioManager.paddleHit1SFX = theme.PaddleHit1SFX;
         audioManager.paddleHit2SFX=theme.PaddleHit2SFX;
         audioManager.scored1SFX = theme.Scored1SFX;
