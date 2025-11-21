@@ -22,9 +22,13 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
+        StartBGM();
+    }
+
+    public void StartBGM()
+    {
         musicSource.clip = backgroundMusic;
         musicSource.Play();
-        
     }
 
     void Awake() //this insures that the audio manager doesn't duplicate itself on awake
