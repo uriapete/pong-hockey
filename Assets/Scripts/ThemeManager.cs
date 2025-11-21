@@ -11,6 +11,8 @@ public class ThemeManager : MonoBehaviour
     public SpriteRenderer ball;
     public SpriteRenderer paddleR;
     public SpriteRenderer paddleL;
+    // scene object that manages audio
+    public AudioManager audioManager;
 
 
     [Header("Sprite Themes: [Background, Ball, PaddleR, PaddleL]")]  //NOTE: ORDER THEM CORRECTLY IN EDITOR; ASSIGNS SPRITE BY ORDER IN ARRAY
