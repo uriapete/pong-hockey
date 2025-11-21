@@ -85,6 +85,11 @@ public class ThemeManager : MonoBehaviour
         paddleL.sprite = theme.Paddle;
         paddleR.sprite = theme.Paddle;
         
-
+        // sets audio.
+        audioManager.backgroundMusic=theme.BackgroundMusic;
+        audioManager.paddleHit1SFX = theme.PaddleHit1SFX;
+        audioManager.paddleHit2SFX=theme.PaddleHit2SFX;
+        audioManager.scored1SFX = theme.Scored1SFX;
+        audioManager.scored2SFX= theme.Scored2SFX;
     }
 }
