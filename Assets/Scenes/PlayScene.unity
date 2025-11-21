@@ -2405,6 +2405,7 @@ MonoBehaviour:
   ball: {fileID: 1231708424}
   paddleR: {fileID: 554194956}
   paddleL: {fileID: 2044501285}
+  audioManager: {fileID: 1003852000}
   themes:
   - {fileID: 11400000, guid: 8eee69270eb7f44aea95f8b7f3baf82d, type: 2}
   - {fileID: 11400000, guid: 73c06d828b73a451c9b6a0626d00239e, type: 2}
