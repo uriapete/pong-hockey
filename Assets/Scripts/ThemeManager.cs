@@ -44,7 +44,7 @@ public class ThemeManager : MonoBehaviour
    public SOUND[] goldSound;
    public SOUND[] halloweenSound;
 
-
+   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -82,5 +82,7 @@ public class ThemeManager : MonoBehaviour
         ball.sprite = theme.Ball;
         paddleL.sprite = theme.Paddle;
         paddleR.sprite = theme.Paddle;
+        
+
     }
 }
