@@ -80,6 +80,7 @@ public class ThemeManager : MonoBehaviour
     // implements the provided theme.
     public void ChangeTheme(Theme theme)
     {
+        // sets sprites (visuals)
         background.sprite = theme.Background;
         ball.sprite = theme.Ball;
         paddleL.sprite = theme.Paddle;
