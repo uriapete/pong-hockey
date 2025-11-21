@@ -10,4 +10,16 @@ public class Theme : ScriptableObject
     public Sprite Background;
     public Sprite Ball;
     public Sprite Paddle;
+
+    // Background music
+    public AudioClip BackgroundMusic;
+
+    // Sound FX
+    // sounds for when the ball hits the paddle.
+    public AudioClip PaddleHit1SFX;
+    public AudioClip PaddleHit2SFX;
+
+    // sounds for when a player scores.
+    public AudioClip Scored1SFX;
+    public AudioClip Scored2SFX;
 }
