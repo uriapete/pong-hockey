@@ -116,10 +116,10 @@ TextureImporter:
       name: Gold_Pad_0
       rect:
         serializedVersion: 2
-        x: 107
-        y: 24
-        width: 130
-        height: 303
+        x: 0
+        y: 0
+        width: 241
+        height: 853
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -15,4 +15,9 @@ MonoBehaviour:
   Name: Halloween
   Background: {fileID: 1902536243086992199, guid: 4afe8d7912f2ce544aed52a5324d8acd, type: 3}
   Ball: {fileID: -8446259436268857031, guid: 5b17171a9273a154394655145f655cac, type: 3}
-  Paddle: {fileID: -6214581826130391414, guid: 97e462c81d522c448b917b65b4ee1448, type: 3}
+  Paddle: {fileID: 7548940399430729067, guid: 97e462c81d522c448b917b65b4ee1448, type: 3}
+  BackgroundMusic: {fileID: 8300000, guid: 3e5ef8c476e51ae438e4d91989162e10, type: 3}
+  PaddleHit1SFX: {fileID: 8300000, guid: 5c329cebbdc4bd94b838fa1dae4737fd, type: 3}
+  PaddleHit2SFX: {fileID: 8300000, guid: f38b5ff383a38ef47b1f2b64fc99023a, type: 3}
+  Scored1SFX: {fileID: 8300000, guid: 9891803807b1ab64493cd326ed1985b4, type: 3}
+  Scored2SFX: {fileID: 8300000, guid: 6fd7d3e20d9e66f48b3cd660d5e8008a, type: 3}

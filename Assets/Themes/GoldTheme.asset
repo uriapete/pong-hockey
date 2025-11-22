@@ -16,3 +16,8 @@ MonoBehaviour:
   Background: {fileID: 8073766125650387101, guid: 191e75db06f357d40b4bc586264f44b8, type: 3}
   Ball: {fileID: 6865204995940206256, guid: 3b3fb2a4f58239740b0867c74c2359f5, type: 3}
   Paddle: {fileID: 6877047070534625121, guid: 224f0bd5e99198f478fd0db5154e62be, type: 3}
+  BackgroundMusic: {fileID: 8300000, guid: abda05ee7ec963045a2a10391c9cda04, type: 3}
+  PaddleHit1SFX: {fileID: 8300000, guid: f272c6381ce5a964ea69bd8d2ca1bba0, type: 3}
+  PaddleHit2SFX: {fileID: 8300000, guid: fb7e85f95609da744beccb38a2849c11, type: 3}
+  Scored1SFX: {fileID: 8300000, guid: d90ae1d8161ee864e9e54fc64bdcf067, type: 3}
+  Scored2SFX: {fileID: 8300000, guid: 511074d0c182d594cb46f922e59544e6, type: 3}
