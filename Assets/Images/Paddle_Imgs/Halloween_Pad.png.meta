@@ -3,8 +3,8 @@ guid: 97e462c81d522c448b917b65b4ee1448
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6214581826130391414
-    second: Halloween_Pad_Left_0
+      213: 7548940399430729067
+    second: Halloween_Pad_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Halloween_Pad_Left_0
+      name: Halloween_Pad_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 200
-        height: 340
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 2
+        width: 500
+        height: 855
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8e46e161ce51c9a0800000000000000
-      internalID: -6214581826130391414
+      spriteID: b6df9aa1c4933c860800000000000000
+      internalID: 7548940399430729067
       vertices: []
       indices: 
       edges: []
@@ -138,17 +138,19 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d53f9791891714e4d89f2df29c5660bd
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: ac813ed8c470e9c4c8fbb308f683ff90, type: 3}
+      name: SkellyThumb
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Halloween_Pad_Left_0: -6214581826130391414
+      Halloween_Pad_0: 7548940399430729067
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
