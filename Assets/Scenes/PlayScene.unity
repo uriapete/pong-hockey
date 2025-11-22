@@ -2405,6 +2405,7 @@ MonoBehaviour:
   ball: {fileID: 1231708424}
   paddleR: {fileID: 554194956}
   paddleL: {fileID: 2044501285}
+  audioManager: {fileID: 1003852000}
   themes:
   - {fileID: 11400000, guid: 8eee69270eb7f44aea95f8b7f3baf82d, type: 2}
   - {fileID: 11400000, guid: 73c06d828b73a451c9b6a0626d00239e, type: 2}
@@ -2471,11 +2472,11 @@ MonoBehaviour:
   musicSource: {fileID: 1990234330}
   SFXSource: {fileID: 832718179}
   volumeSlider: {fileID: 0}
-  backgroundMusic: {fileID: 8300000, guid: e9dd00ead5b206644b809ac6b9e1f11a, type: 3}
-  paddleHit1SFX: {fileID: 8300000, guid: 61d33470f5bafba4099cfccdbc80c498, type: 3}
-  paddleHit2SFX: {fileID: 8300000, guid: e9c67bfdad11b624cbe77a9ec1c5372e, type: 3}
-  scored1SFX: {fileID: 8300000, guid: 999e70fdad491884da737938d1cbf212, type: 3}
-  scored2SFX: {fileID: 8300000, guid: d2ab2645ea7546140b50e458244e0f43, type: 3}
+  backgroundMusic: {fileID: 0}
+  paddleHit1SFX: {fileID: 0}
+  paddleHit2SFX: {fileID: 0}
+  scored1SFX: {fileID: 0}
+  scored2SFX: {fileID: 0}
 --- !u!4 &1003852001
 Transform:
   m_ObjectHideFlags: 0

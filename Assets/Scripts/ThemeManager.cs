@@ -11,6 +11,8 @@ public class ThemeManager : MonoBehaviour
     public SpriteRenderer ball;
     public SpriteRenderer paddleR;
     public SpriteRenderer paddleL;
+    // scene object that manages audio
+    public AudioManager audioManager;
 
 
     [Header("Sprite Themes: [Background, Ball, PaddleR, PaddleL]")]  //NOTE: ORDER THEM CORRECTLY IN EDITOR; ASSIGNS SPRITE BY ORDER IN ARRAY
@@ -37,12 +39,12 @@ public class ThemeManager : MonoBehaviour
     // temporary id variable for pre-ui testing.
     private int TEMPThemeID = 0;
 
-   [Header("Sound: [Music, SFX]")]
-   private SOUND[] chosenSound;
+//    [Header("Sound: [Music, SFX]")]
+//    private SOUND[] chosenSound;
 
-   public SOUND[] defaultSound;
-   public SOUND[] goldSound;
-   public SOUND[] halloweenSound;
+//    public SOUND[] defaultSound;
+//    public SOUND[] goldSound;
+//    public SOUND[] halloweenSound;
 
    
 
@@ -78,11 +80,21 @@ public class ThemeManager : MonoBehaviour
     // implements the provided theme.
     public void ChangeTheme(Theme theme)
     {
+        // sets sprites (visuals)
         background.sprite = theme.Background;
         ball.sprite = theme.Ball;
         paddleL.sprite = theme.Paddle;
         paddleR.sprite = theme.Paddle;
         
-
+        // sets audio.
+        audioManager.backgroundMusic=theme.BackgroundMusic;
+        
+        // play new bgm.
+        audioManager.StartBGM();
+        
+        audioManager.paddleHit1SFX = theme.PaddleHit1SFX;
+        audioManager.paddleHit2SFX=theme.PaddleHit2SFX;
+        audioManager.scored1SFX = theme.Scored1SFX;
+        audioManager.scored2SFX= theme.Scored2SFX;
     }
 }
