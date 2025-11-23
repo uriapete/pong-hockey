@@ -15,12 +15,20 @@ public class ResolutionManager : MonoBehaviour
     private List<string> resolutionOptions = new List<string>(); // list of strings for the dropdown UI
 
 
+
     void Start()
     {
-        //
+        UpdateObjectPositions();
     }
 
-    
+    public void UpdateObjectPositions()
+    {
+        CalculateScreenBounds();
+        PositionWalls();
+        PositionPaddles();
+        Debug.Log("Screen boundaries updated for new resolution.");
+
+    }
     void Awake()
     {
         SetupAvailableResolutions();
@@ -77,18 +85,97 @@ public void SetFullscreen(bool isFullscreen)
         if (filteredResolutions == null || filteredResolutions.Length == 0) //don't get rid of this, trust me.
         {
             //Debug.LogWarning("flipping race condition: resolutions not initialized yet.");
-            return; // Exit safely if data isn't ready
+            return;
         }
 
         if (resolutionIndex >= 0 && resolutionIndex < filteredResolutions.Length) 
         {
             Resolution selectedResolution = filteredResolutions[resolutionIndex];
             
-            Screen.SetResolution(selectedResolution.width, selectedResolution.height, FullScreenMode.Windowed);
+            Screen.SetResolution(selectedResolution.width, selectedResolution.height, Screen.fullScreen);
             
             Debug.Log($"Changed resolution to: {selectedResolution.width}x{selectedResolution.height}");
+
+            Invoke("CallUpdatePositions", 0.1f);
+            
         
         }
+    }
+
+    public Transform leftWall;
+    public Transform rightWall;
+    public Transform topWall;
+    public Transform bottomWall;
+    public Transform leftPaddle;
+    public Transform rightPaddle;
+    
+    public float wallThickness = 1.0f; 
+    public float paddlePadding = 1.0f;
+
+    private float screenLeft;
+    private float screenRight;
+    private float screenTop;
+    private float screenBottom;
+
+    private void CalculateScreenBounds()
+    {
+        Camera mainCamera = Camera.main;
+        Vector3 bottomLeftCorner = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane));
+        Vector3 topRightCorner = mainCamera.ViewportToWorldPoint(new Vector3(1, 1, mainCamera.nearClipPlane));
+
+        screenLeft = bottomLeftCorner.x;
+        screenRight = topRightCorner.x;
+        screenBottom = bottomLeftCorner.y;
+        screenTop = topRightCorner.y;
+    }
+
+    private void PositionWalls()
+    {
+        // Define half of the wall thickness for positioning offset
+        float halfWall = wallThickness / 2f;
+        float screenHeight = screenTop - screenBottom;
+        float screenWidth = screenRight - screenLeft;
+
+        // Left and Right Walls
+        if (leftWall != null)
+        {
+            leftWall.position = new Vector3(screenLeft - halfWall, 0, 0);
+            leftWall.localScale = new Vector3(wallThickness, screenHeight, 1);
+        }
+        if (rightWall != null)
+        {
+            rightWall.position = new Vector3(screenRight + halfWall, 0, 0);
+            rightWall.localScale = new Vector3(wallThickness, screenHeight, 1);
+        }
+
+        // Top and Bottom Walls
+        if (topWall != null)
+        {
+            topWall.position = new Vector3(0, screenTop + halfWall, 0);
+            topWall.localScale = new Vector3(screenWidth, wallThickness, 1);
+        }
+        if (bottomWall != null)
+        {
+            bottomWall.position = new Vector3(0, screenBottom - halfWall, 0);
+            bottomWall.localScale = new Vector3(screenWidth, wallThickness, 1);
+        }
+    }
+
+    private void PositionPaddles()
+    {
+        // Paddles
+        if (leftPaddle != null)
+        {
+            leftPaddle.position = new Vector3(screenLeft + paddlePadding, 0, 0);
+        }
+        if (rightPaddle != null)
+        {
+            rightPaddle.position = new Vector3(screenRight - paddlePadding, 0, 0);
+        }
+    }
+    private void CallUpdatePositions()
+    {
+        this.UpdateObjectPositions();
     }
 
 }
