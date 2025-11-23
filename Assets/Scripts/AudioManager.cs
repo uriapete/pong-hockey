@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using System.Collections;
+using System.Drawing;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -10,13 +12,20 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
     [Header("Audio Clip")]
+    [SerializeField] Slider volumeSlider;
     public AudioClip backgroundMusic;
     public AudioClip paddleHit1SFX;
     public AudioClip paddleHit2SFX;
     public AudioClip scored1SFX;
     public AudioClip scored2SFX;
 
+
     void Start()
+    {
+        StartBGM();
+    }
+
+    public void StartBGM()
     {
         musicSource.clip = backgroundMusic;
         musicSource.Play();
@@ -39,4 +48,21 @@ public class AudioManager : MonoBehaviour
     {
         SFXSource.PlayOneShot(clip);
     }
+
+    // updates volume to provided when called
+    public void UpdateMusicVolume(System.Single volume)
+    {
+        musicSource.volume = volume;
+        
+    }
+
+    //updates SFX volume to provided when called
+    public void UpdateSFXVolume(System.Single volume)
+    {
+        SFXSource.volume = volume;
+        
+    }
+
+
+
 }

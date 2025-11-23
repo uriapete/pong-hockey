@@ -518,10 +518,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1003852000}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: UpdateSFXVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &187326539
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,7 +2246,7 @@ SpriteRenderer:
   m_SortingOrder: 2
   m_Sprite: {fileID: 6528055498615950045, guid: 7b27d021977dbf246ba360728d41ff2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.41, y: 8.53}
@@ -3353,6 +3365,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940938055}
   m_CullTransparentMesh: 1
+--- !u!1 &987749945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 987749947}
+  - component: {fileID: 987749946}
+  m_Layer: 0
+  m_Name: ThemeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &987749946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987749945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 395908d92edb78241b19a9a39f98396a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThemeManager
+  background: {fileID: 1109634807}
+  ball: {fileID: 1231708424}
+  paddleR: {fileID: 554194956}
+  paddleL: {fileID: 2044501285}
+  audioManager: {fileID: 1003852000}
+  themes:
+  - {fileID: 11400000, guid: 8eee69270eb7f44aea95f8b7f3baf82d, type: 2}
+  - {fileID: 11400000, guid: 73c06d828b73a451c9b6a0626d00239e, type: 2}
+  - {fileID: 11400000, guid: 799d3cc563cfd40ea87795bb70e5ec0e, type: 2}
+  defaultTheme:
+  - {fileID: -2456250800155162661, guid: 6a1d91b1ab2ec39488835bd39bf4c355, type: 3}
+  - {fileID: 1952258401829744170, guid: f7d2321f542b54f4793df430ba5c028a, type: 3}
+  - {fileID: 6528055498615950045, guid: 7b27d021977dbf246ba360728d41ff2b, type: 3}
+  - {fileID: 6528055498615950045, guid: 7b27d021977dbf246ba360728d41ff2b, type: 3}
+  goldTheme:
+  - {fileID: 8073766125650387101, guid: 191e75db06f357d40b4bc586264f44b8, type: 3}
+  - {fileID: 6865204995940206256, guid: 3b3fb2a4f58239740b0867c74c2359f5, type: 3}
+  - {fileID: 6877047070534625121, guid: 224f0bd5e99198f478fd0db5154e62be, type: 3}
+  - {fileID: 6877047070534625121, guid: 224f0bd5e99198f478fd0db5154e62be, type: 3}
+  halloweenTheme:
+  - {fileID: 1902536243086992199, guid: 4afe8d7912f2ce544aed52a5324d8acd, type: 3}
+  - {fileID: -8446259436268857031, guid: 5b17171a9273a154394655145f655cac, type: 3}
+  - {fileID: -8998076753455098308, guid: 801f2012653930040b90fc7e9f8ed7af, type: 3}
+  - {fileID: -6214581826130391414, guid: 97e462c81d522c448b917b65b4ee1448, type: 3}
+--- !u!4 &987749947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987749945}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 560.1853, y: 292.38867, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1003851999
 GameObject:
   m_ObjectHideFlags: 0
@@ -3384,11 +3464,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicSource: {fileID: 1990234330}
   SFXSource: {fileID: 832718179}
-  backgroundMusic: {fileID: 8300000, guid: e9dd00ead5b206644b809ac6b9e1f11a, type: 3}
-  paddleHit1SFX: {fileID: 8300000, guid: 61d33470f5bafba4099cfccdbc80c498, type: 3}
-  paddleHit2SFX: {fileID: 8300000, guid: e9c67bfdad11b624cbe77a9ec1c5372e, type: 3}
-  scored1SFX: {fileID: 8300000, guid: 999e70fdad491884da737938d1cbf212, type: 3}
-  scored2SFX: {fileID: 8300000, guid: d2ab2645ea7546140b50e458244e0f43, type: 3}
+  volumeSlider: {fileID: 0}
+  backgroundMusic: {fileID: 0}
+  paddleHit1SFX: {fileID: 0}
+  paddleHit2SFX: {fileID: 0}
+  scored1SFX: {fileID: 0}
+  scored2SFX: {fileID: 0}
 --- !u!4 &1003852001
 Transform:
   m_ObjectHideFlags: 0
@@ -4200,7 +4281,7 @@ GameObject:
   - component: {fileID: 1109634806}
   - component: {fileID: 1109634807}
   m_Layer: 0
-  m_Name: WindowsXP_Bkgd_0
+  m_Name: BackgroundObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4365,7 +4446,7 @@ GameObject:
   - component: {fileID: 1231708423}
   - component: {fileID: 1231708424}
   m_Layer: 0
-  m_Name: DVDOrig_Ball_0
+  m_Name: BallObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6364,10 +6445,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1003852000}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: UpdateMusicVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &1671737679
 GameObject:
   m_ObjectHideFlags: 0
@@ -8899,4 +8992,4 @@ SceneRoots:
   - {fileID: 87189379}
   - {fileID: 1013880958}
   - {fileID: 1003852001}
-  - {fileID: 1855378643}
+  - {fileID: 987749947}
