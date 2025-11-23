@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using System.Collections;
 using System.Drawing;
 using UnityEngine.UI;
+using TMPro;
 
 public class AudioManager : MonoBehaviour
 {
@@ -12,12 +13,16 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
     [Header("Audio Clip")]
-    [SerializeField] Slider volumeSlider;
+    [SerializeField] Slider musicSlider;
+    [SerializeField] Slider sfxSlider;
+    public TextMeshProUGUI musicTxt;
+    public TextMeshProUGUI sfxTxt;
     public AudioClip backgroundMusic;
     public AudioClip paddleHit1SFX;
     public AudioClip paddleHit2SFX;
     public AudioClip scored1SFX;
     public AudioClip scored2SFX;
+    
 
 
     void Start()
@@ -53,6 +58,7 @@ public class AudioManager : MonoBehaviour
     public void UpdateMusicVolume(System.Single volume)
     {
         musicSource.volume = volume;
+        musicTxt.text = "Music: " + Mathf.RoundToInt(volume * 100);
         
     }
 
@@ -60,6 +66,7 @@ public class AudioManager : MonoBehaviour
     public void UpdateSFXVolume(System.Single volume)
     {
         SFXSource.volume = volume;
+        sfxTxt.text = "SFX:   " + Mathf.RoundToInt(volume * 100);
         
     }
 
