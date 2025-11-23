@@ -1488,7 +1488,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
   resolutionDropdown: {fileID: 348297543}
   fullscreenToggle: {fileID: 1338140009}
-  gameManager: {fileID: 0}
   leftWall: {fileID: 1415776757}
   rightWall: {fileID: 1994860463}
   topWall: {fileID: 808897689}
@@ -4215,7 +4214,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.40910634, g: 0.9811321, b: 0.24528302, a: 1}
   m_FlipX: 0
@@ -4607,7 +4606,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.40784317, g: 0.9803922, b: 0.24313727, a: 1}
   m_FlipX: 0
@@ -5220,7 +5219,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResolutionManager
   resolutionDropdown: {fileID: 348297543}
   fullscreenToggle: {fileID: 1338140009}
-  gameManager: {fileID: 0}
   leftWall: {fileID: 1415776757}
   rightWall: {fileID: 1994860463}
   topWall: {fileID: 808897689}
@@ -5844,7 +5842,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.8396226, g: 0.19406372, b: 0.19406372, a: 1}
   m_FlipX: 0
@@ -7236,7 +7234,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.8396226, g: 0.19406372, b: 0.19406372, a: 1}
   m_FlipX: 0
@@ -7489,14 +7487,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
   resolutionDropdown: {fileID: 348297543}
-  fullscreenToggle: {fileID: 0}
-  gameManager: {fileID: 0}
-  leftWall: {fileID: 0}
-  rightWall: {fileID: 0}
-  topWall: {fileID: 0}
-  bottomWall: {fileID: 0}
-  leftPaddle: {fileID: 0}
-  rightPaddle: {fileID: 0}
+  fullscreenToggle: {fileID: 1338140009}
+  leftWall: {fileID: 1415776757}
+  rightWall: {fileID: 1994860463}
+  topWall: {fileID: 808897689}
+  bottomWall: {fileID: 1312765217}
+  leftPaddle: {fileID: 2044501284}
+  rightPaddle: {fileID: 554194955}
   wallThickness: 1
   paddlePadding: 1
 --- !u!4 &1855378643

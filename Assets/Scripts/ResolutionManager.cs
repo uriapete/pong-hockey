@@ -9,11 +9,9 @@ public class ResolutionManager : MonoBehaviour
     [Header("Drop down UI Elements to be messed with >:)")]
     [SerializeField] private TMP_Dropdown resolutionDropdown; 
     [SerializeField] private Toggle fullscreenToggle;
-
     
     private Resolution[] filteredResolutions; // array that stores filtered resolutions
     private List<string> resolutionOptions = new List<string>(); // list of strings for the dropdown UI
-
 
 
     void Start()
@@ -26,7 +24,7 @@ public class ResolutionManager : MonoBehaviour
         CalculateScreenBounds();
         PositionWalls();
         PositionPaddles();
-        Debug.Log("Screen boundaries updated for new resolution.");
+        //Debug.Log("Screen boundaries updated for new resolution.");
 
     }
     void Awake()
@@ -35,7 +33,7 @@ public class ResolutionManager : MonoBehaviour
         //
     }
 
-public void SetFullscreen(bool isFullscreen)
+    public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
         Debug.Log("Fullscreen is " + isFullscreen);
@@ -101,6 +99,8 @@ public void SetFullscreen(bool isFullscreen)
         
         }
     }
+
+    [Header("Everything that needs position updates")]
 
     public Transform leftWall;
     public Transform rightWall;
@@ -172,10 +172,6 @@ public void SetFullscreen(bool isFullscreen)
         {
             rightPaddle.position = new Vector3(screenRight - paddlePadding, 0, 0);
         }
-    }
-    private void CallUpdatePositions()
-    {
-        this.UpdateObjectPositions();
     }
 
 }
