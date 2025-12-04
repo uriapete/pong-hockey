@@ -5287,6 +5287,7 @@ MonoBehaviour:
   rightScored: 0
   leftScored: 0
   spriteRenderer: {fileID: 1231708424}
+  dvdLogo: {fileID: 9012155941208627577, guid: b295ffdcab274d04184dbea13b4844c2, type: 3}
 --- !u!50 &1864824152
 Rigidbody2D:
   serializedVersion: 5
