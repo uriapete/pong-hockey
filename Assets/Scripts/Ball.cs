@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+
 public class Ball : MonoBehaviour
 {
     public float Speed { get; private set; } = 5;
@@ -24,7 +25,7 @@ public class Ball : MonoBehaviour
     AudioManager audioManager;
 
     Color randColor;
-    SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
 
     void Start()
@@ -100,11 +101,11 @@ public class Ball : MonoBehaviour
     // Called when the ball bounces on either paddle
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Random random1 = new Random().NextDouble();
-        Random random2 = new Random().NextDouble();
-        Random random3 = new Random().NextDouble();
-        randColor = new Color(random1, random2, random3);
+       //On collision, change ball color
+       //NOTE: need to change in future with theme manager so it only changes DVD logo and not other ball sprites
+        randColor = new Color(UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f));
         spriteRenderer.color = randColor;
+       
 
         if (collision.gameObject.CompareTag("Player1"))
         {

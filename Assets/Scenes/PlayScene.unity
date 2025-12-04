@@ -2407,7 +2407,7 @@ MonoBehaviour:
   paddleL: {fileID: 2044501285}
   defaultTheme:
   - {fileID: -2456250800155162661, guid: 6a1d91b1ab2ec39488835bd39bf4c355, type: 3}
-  - {fileID: 1952258401829744170, guid: f7d2321f542b54f4793df430ba5c028a, type: 3}
+  - {fileID: 9012155941208627577, guid: b295ffdcab274d04184dbea13b4844c2, type: 3}
   - {fileID: 6528055498615950045, guid: 7b27d021977dbf246ba360728d41ff2b, type: 3}
   - {fileID: 6528055498615950045, guid: 7b27d021977dbf246ba360728d41ff2b, type: 3}
   goldTheme:
@@ -3516,8 +3516,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1952258401829744170, guid: f7d2321f542b54f4793df430ba5c028a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 9012155941208627577, guid: b295ffdcab274d04184dbea13b4844c2, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5286,6 +5286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   rightScored: 0
   leftScored: 0
+  spriteRenderer: {fileID: 1231708424}
 --- !u!50 &1864824152
 Rigidbody2D:
   serializedVersion: 5
