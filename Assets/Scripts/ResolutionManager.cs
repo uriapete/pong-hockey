@@ -17,6 +17,13 @@ public class ResolutionManager : MonoBehaviour
     void Start()
     {
         UpdateObjectPositions();
+
+        bool isCurrentlyFullscreen = Screen.fullScreen;
+
+        if (fullscreenToggle != null)
+        {
+            fullscreenToggle.isOn = isCurrentlyFullscreen;
+        }
     }
 
     public void UpdateObjectPositions()
@@ -80,9 +87,9 @@ public class ResolutionManager : MonoBehaviour
     }
     public void ApplyResolution(int resolutionIndex)
     {
-        if (filteredResolutions == null || filteredResolutions.Length == 0) //don't get rid of this, trust me.
+        if (filteredResolutions == null || filteredResolutions.Length == 0) //don't get rid of this
         {
-            //Debug.LogWarning("flipping race condition: resolutions not initialized yet.");
+            //Debug.LogWarning("resolutions not initialized yet, race condition");
             return;
         }
 
@@ -100,6 +107,10 @@ public class ResolutionManager : MonoBehaviour
         }
     }
 
+    /// 
+    /// Updating and transforming positions with new screen resolutions.
+    /// 
+    
     [Header("Everything that needs position updates")]
 
     public Transform leftWall;

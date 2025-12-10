@@ -14,7 +14,7 @@ public class ResolutionDetector : MonoBehaviour, IPointerEnterHandler, IEventSys
 
         if (gameResolutionManager == null)
         {
-            gameResolutionManager = FindObjectOfType<ResolutionManager>();
+            gameResolutionManager = Object.FindAnyObjectByType<ResolutionManager>(); //FindObjectOfType , FindFirstObject , FindAnyObjectByType
         } 
     }
  
@@ -32,7 +32,7 @@ public class ResolutionDetector : MonoBehaviour, IPointerEnterHandler, IEventSys
             {
                 // Call the function that updates all your paddles and walls
                 gameResolutionManager.UpdateObjectPositions();
-                Debug.Log("Triggered physical object update via UI detector.");
+                //Debug.Log("Triggered physical object update via UI detector.");
             }
         }
     }
