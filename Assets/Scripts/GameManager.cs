@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
     public GameObject mainMenu;
     public GameObject pauseMenu;
     public GameObject settingsMenu;
-    public GameObject themesMenu;
 
     private bool isPaused;
     public bool gameActive;
@@ -172,35 +171,10 @@ public class GameManager : MonoBehaviour
         pauseMenu.SetActive(true);
     }
 
-    public void OpenThemesMenu() // Moving forward from Settings to Themes
-    {
-        settingsMenu.SetActive(false);
-        themesMenu.SetActive(true);
-    }
-
     public void ResumeGameOrPreviousPage()    //resume game; clock resumes
     {
-        if (themesMenu.activeSelf)
-        {
-            themesMenu.SetActive(false);
-            settingsMenu.SetActive(true);
-        }
 
-        else if (settingsMenu.activeSelf) 
-        {
-            settingsMenu.SetActive(false);
-        
-            if (gameActive)    //if settings menu is open while game is active, go back to pause menu
-            {
-                pauseMenu.transform.Find("PauseMainMenu").gameObject.SetActive(true);
-            }
-            else     //if settings menu is open while game not active, go back to main menu
-            {
-                mainMenu.transform.Find("Menu").gameObject.SetActive(true);
-            }
-        }
-
-        else
+        if (!settingsMenu.activeSelf)    //if settings menu is closed, close pause menu and resume game
         {
             isPaused = false;
             Time.timeScale = 1f;
@@ -209,6 +183,18 @@ public class GameManager : MonoBehaviour
 
             gameActive = true;
         }
+        else if (gameActive)    //if settings menu is open while game is active, go back to pause menu
+        {
+            settingsMenu.SetActive(false);
+            pauseMenu.transform.Find("PauseMainMenu").gameObject.SetActive(true);
+        }
+        else     //if settings menu is open while game not active, go back to main menu
+        {
+            settingsMenu.SetActive(false);
+            mainMenu.transform.Find("Menu").gameObject.SetActive(true);
+        }
+
+        
     }
 
     public void QuitGame()
