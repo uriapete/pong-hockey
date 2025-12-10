@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+
 
 public class Ball : MonoBehaviour
 {
@@ -22,6 +24,11 @@ public class Ball : MonoBehaviour
     public bool leftScored = false;
     AudioManager audioManager;
 
+    //color changing
+    Color randColor;
+    public SpriteRenderer spriteRenderer;
+    public Sprite dvdLogo;
+
 
     void Start()
     {
@@ -30,6 +37,18 @@ public class Ball : MonoBehaviour
 
         // serve the ball.
         StartNewRound(StartServeAngle);
+
+        
+        //set color of sprite
+        //NOTE: should eventually move this to thememanager
+        if (spriteRenderer.sprite == dvdLogo)
+        {
+            spriteRenderer.color = new Color(0f, 0f, 0f);
+        }
+        else
+        {
+            spriteRenderer.color = new Color(1f, 1f, 1f);
+        }
     }
 
     void Awake()
@@ -96,6 +115,20 @@ public class Ball : MonoBehaviour
     // Called when the ball bounces on either paddle
     void OnCollisionEnter2D(Collision2D collision)
     {
+       //On collision, change ball color
+       //NOTE: need to move most of this to theme manager when done
+        if (spriteRenderer.sprite == dvdLogo)
+        {
+            spriteRenderer.color = new Color(0f, 0f, 0f);
+            randColor = new Color(UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f));
+            spriteRenderer.color = randColor;
+        }
+        else
+        {
+            spriteRenderer.color = new Color(1f, 1f, 1f);
+        }
+
+
         if (collision.gameObject.CompareTag("Player1"))
         {
             audioManager.PlaySFX(audioManager.paddleHit1SFX);
