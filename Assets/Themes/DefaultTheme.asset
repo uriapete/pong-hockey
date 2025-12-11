@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Theme
   Name: Default
   Background: {fileID: -2456250800155162661, guid: 6a1d91b1ab2ec39488835bd39bf4c355, type: 3}
-  Ball: {fileID: 1952258401829744170, guid: f7d2321f542b54f4793df430ba5c028a, type: 3}
+  Ball: {fileID: 9012155941208627577, guid: b295ffdcab274d04184dbea13b4844c2, type: 3}
   Paddle: {fileID: 6528055498615950045, guid: 7b27d021977dbf246ba360728d41ff2b, type: 3}
   BackgroundMusic: {fileID: 8300000, guid: e9dd00ead5b206644b809ac6b9e1f11a, type: 3}
   PaddleHit1SFX: {fileID: 8300000, guid: 61d33470f5bafba4099cfccdbc80c498, type: 3}
