@@ -9,9 +9,10 @@ public class ThemeButton : MonoBehaviour
     // private as we won't set this in unity, will be passed to script constructor
     private ThemeManager ThemeManager;
 
-    public ThemeButton(Theme theme)
+    public ThemeButton(Theme theme, ThemeManager manager)
     {
         this.Theme = theme;
+        this.ThemeManager=manager;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
