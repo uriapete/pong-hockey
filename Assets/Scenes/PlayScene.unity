@@ -6162,7 +6162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bdb72ef4295740dfa91534aaa6b64db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  themeManager: {fileID: 987749946}
+  ThemeManager: {fileID: 987749946}
 --- !u!1 &1987046971
 GameObject:
   m_ObjectHideFlags: 0
