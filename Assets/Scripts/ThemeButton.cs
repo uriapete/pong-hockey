@@ -26,4 +26,10 @@ public class ThemeButton : MonoBehaviour
     {
         
     }
+
+    // Tells the ThemeManager to change it's theme to this button's Theme.
+    public void LoadTheme()
+    {
+        ThemeManager.ChangeTheme(Theme);
+    }
 }
