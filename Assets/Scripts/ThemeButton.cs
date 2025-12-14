@@ -9,6 +9,8 @@ public class ThemeButton : MonoBehaviour
     // private as we won't set this in unity, will be passed to script constructor
     private ThemeManager ThemeManager;
 
+    // TODO: Add fields for thumbnail image and thumbnail component.
+
     public ThemeButton(Theme theme, ThemeManager manager)
     {
         this.Theme = theme;
