@@ -4,7 +4,12 @@ public class ThemeButton : MonoBehaviour
 {
     // What theme this button will load.
     public Theme Theme;
-    
+
+    public ThemeButton(Theme theme)
+    {
+        this.Theme = theme;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
