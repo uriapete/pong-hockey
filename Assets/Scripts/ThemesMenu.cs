@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class ThemesMenu : MonoBehaviour
 {
+    // Node where we'll get our list of themes and load them.
+    public ThemeManager themeManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
