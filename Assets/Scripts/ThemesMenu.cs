@@ -20,6 +20,8 @@ public class ThemesMenu : MonoBehaviour
     // Takes three themes from the theme list, loads their buttons in the menu.
     void LoadThemes(int startIdx)
     {
+        // TODO: Implement pseudocode.
+        
         // Take ThemeManager.Themes[]
         // Take themes from Themes @ idxs: startIdx, startIdx+1, ...+2 -> themesToLoad[] (length<=3)
 
