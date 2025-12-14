@@ -21,7 +21,7 @@ public class ThemesMenu : MonoBehaviour
     void LoadThemes(int startIdx)
     {
         // TODO: Implement pseudocode.
-        
+
         // Take ThemeManager.Themes[]
         // Take themes from Themes @ idxs: startIdx, startIdx+1, ...+2 -> themesToLoad[] (length<=3)
 
@@ -40,5 +40,7 @@ public class ThemesMenu : MonoBehaviour
                 // thmBtn.x = start_x + (idx*offset)
             // add to tree under this (ThemesMenu)
         // next
+
+        // TODO: Test prefab spawning - try spawning a ThemeButton Prefab before doing loop.
     }
 }
