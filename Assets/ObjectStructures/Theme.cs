@@ -22,4 +22,7 @@ public class Theme : ScriptableObject
     // sounds for when a player scores.
     public AudioClip Scored1SFX;
     public AudioClip Scored2SFX;
+
+    // square preview for the theme.
+    public Sprite Thumbnail;
 }
