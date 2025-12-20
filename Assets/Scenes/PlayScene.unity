@@ -3058,7 +3058,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3330,8 +3329,8 @@ MonoBehaviour:
   halloweenTheme:
   - {fileID: 1902536243086992199, guid: 4afe8d7912f2ce544aed52a5324d8acd, type: 3}
   - {fileID: -8446259436268857031, guid: 5b17171a9273a154394655145f655cac, type: 3}
-  - {fileID: -8998076753455098308, guid: 801f2012653930040b90fc7e9f8ed7af, type: 3}
-  - {fileID: -6214581826130391414, guid: 97e462c81d522c448b917b65b4ee1448, type: 3}
+  - {fileID: 7548940399430729067, guid: 97e462c81d522c448b917b65b4ee1448, type: 3}
+  - {fileID: 7548940399430729067, guid: 97e462c81d522c448b917b65b4ee1448, type: 3}
 --- !u!4 &987749947
 Transform:
   m_ObjectHideFlags: 0
@@ -3380,13 +3379,13 @@ MonoBehaviour:
   SFXSource: {fileID: 832718179}
   musicSlider: {fileID: 1648971351}
   sfxSlider: {fileID: 182380613}
+  musicTxt: {fileID: 909571672}
+  sfxTxt: {fileID: 1284718921}
   backgroundMusic: {fileID: 0}
   paddleHit1SFX: {fileID: 0}
   paddleHit2SFX: {fileID: 0}
   scored1SFX: {fileID: 0}
   scored2SFX: {fileID: 0}
-  sfxTxt: {fileID: 1284718921}
-  musicTxt: {fileID: 909571672}
 --- !u!4 &1003852001
 Transform:
   m_ObjectHideFlags: 0
@@ -4719,7 +4718,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
