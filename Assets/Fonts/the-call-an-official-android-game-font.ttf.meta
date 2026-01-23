@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8f773dd285fa8442a357bb62c53844e
+guid: 03271068a8f3cfe48befede034f52026
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Perfect DOS VGA 437
+  - THE CALL (an official android game font)
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
