@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7316fd79662534637910d24228f95674, type: 3}
+  m_Name: ClassicTheme
+  m_EditorClassIdentifier: Assembly-CSharp::Theme
+  Name: Classic
+  Background: {fileID: 3607600120628477640, guid: 3e7063d599d38704db9fdeea3ab2cac1, type: 3}
+  Ball: {fileID: 6042686560029699032, guid: a4651f60aeb00574b9cf7356a80b9f6d, type: 3}
+  Paddle: {fileID: 3269616818966133554, guid: cfc32966911e8fe4abf057737f2ff68f, type: 3}
+  BackgroundMusic: {fileID: 8300000, guid: 03a1b1378c2743e4288bd61bc1a09a2f, type: 3}
+  PaddleHit1SFX: {fileID: 8300000, guid: 5e8612f5dea8d7c45b6e3cad7976d74a, type: 3}
+  PaddleHit2SFX: {fileID: 8300000, guid: 1985a3f1b379c094184a568424d6188d, type: 3}
+  Scored1SFX: {fileID: 8300000, guid: 4d166438f4c726e4490e5b7c7ecf0be5, type: 3}
+  Scored2SFX: {fileID: 8300000, guid: 516f3b69d1174f3409537d4c8f699031, type: 3}
