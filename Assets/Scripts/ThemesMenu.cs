@@ -23,8 +23,6 @@ public class ThemesMenu : MonoBehaviour
     // Takes three themes from the theme list, loads their buttons in the menu.
     void LoadThemes(int startIdx)
     {
-        // TODO: Test prefab spawning - try spawning a ThemeButton Prefab before doing full function.
-
         // TODO: Implement pseudocode.
 
         // Take ThemeManager.Themes[]
