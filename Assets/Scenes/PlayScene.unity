@@ -6163,6 +6163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   ThemeManager: {fileID: 987749946}
+  ThemeButton: {fileID: 2945649037634444144, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
 --- !u!1 &1987046971
 GameObject:
   m_ObjectHideFlags: 0
