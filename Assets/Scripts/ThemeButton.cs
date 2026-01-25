@@ -9,7 +9,8 @@ public class ThemeButton : MonoBehaviour
     // public to expl set in unity
     public ThemeManager ThemeManager;
 
-    // TODO: Add fields for thumbnail image and thumbnail component.
+    // Thumbnail component, sets thumbnail
+    public SpriteRenderer SpriteRenderer;
 
     public ThemeButton(Theme theme, ThemeManager manager)
     {
