@@ -445,6 +445,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThemeButtonL
       objectReference: {fileID: 0}
+    - target: {fileID: 7279845036631860523, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
+      propertyPath: Theme
+      value: 
+      objectReference: {fileID: 11400000, guid: 8eee69270eb7f44aea95f8b7f3baf82d, type: 2}
+    - target: {fileID: 7279845036631860523, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
+      propertyPath: ThemeManager
+      value: 
+      objectReference: {fileID: 987749946}
     - target: {fileID: 8703079476257224314, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -654,7 +662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &187326540
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3235,7 +3243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1069045161
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5472,6 +5480,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7279845036631860523, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
+      propertyPath: Theme
+      value: 
+      objectReference: {fileID: 11400000, guid: 73c06d828b73a451c9b6a0626d00239e, type: 2}
+    - target: {fileID: 7279845036631860523, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
+      propertyPath: ThemeManager
+      value: 
+      objectReference: {fileID: 987749946}
     - target: {fileID: 8703079476257224314, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5574,6 +5590,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThemeButtonR
       objectReference: {fileID: 0}
+    - target: {fileID: 7279845036631860523, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
+      propertyPath: Theme
+      value: 
+      objectReference: {fileID: 11400000, guid: 799d3cc563cfd40ea87795bb70e5ec0e, type: 2}
+    - target: {fileID: 7279845036631860523, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
+      propertyPath: ThemeManager
+      value: 
+      objectReference: {fileID: 987749946}
     - target: {fileID: 8703079476257224314, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6439,7 +6463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1959540440
 RectTransform:
   m_ObjectHideFlags: 0
