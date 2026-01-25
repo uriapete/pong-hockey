@@ -5,6 +5,9 @@ public class ThemesMenu : MonoBehaviour
     // Node where we'll get our list of themes and load them.
     public ThemeManager ThemeManager;
 
+    // Prefab for buttons
+    public GameObject ThemeButton;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
