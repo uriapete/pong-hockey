@@ -32,6 +32,11 @@ public class ThemeButton : MonoBehaviour
     // Tells the ThemeManager to change it's theme to this button's Theme.
     public void LoadTheme()
     {
+        // if the current theme is already set to this theme, dont do anything
+        if (ThemeManager.currentTheme.Equals(Theme))
+        {
+            return;
+        }
         ThemeManager.ChangeTheme(Theme);
     }
 }
