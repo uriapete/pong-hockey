@@ -6,8 +6,8 @@ public class ThemeButton : MonoBehaviour
     public Theme Theme;
 
     // The manager that this button will pass its Theme to.
-    // private as we won't set this in unity, will be passed to script constructor
-    private ThemeManager ThemeManager;
+    // public to expl set in unity
+    public ThemeManager ThemeManager;
 
     // TODO: Add fields for thumbnail image and thumbnail component.
 
