@@ -285,6 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Theme: {fileID: 0}
   ThemeManager: {fileID: 0}
+  SpriteRenderer: {fileID: 5870578825363485690}
 --- !u!1 &6896816468441863056
 GameObject:
   m_ObjectHideFlags: 0
