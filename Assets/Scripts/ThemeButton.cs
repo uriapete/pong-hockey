@@ -21,7 +21,9 @@ public class ThemeButton : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // TODO: On Start, load thumbnail onto button.
+        // loads thumbnail on load
+        // TODO: TEST THIS
+        SpriteRenderer.sprite=Theme.Thumbnail;
     }
 
     // Update is called once per frame
