@@ -40,6 +40,6 @@ public class ThemeButton : MonoBehaviour
         {
             return;
         }
-        ThemeManager.ChangeTheme(Theme);
+        ThemeManager.PickTheme(Theme);
     }
 }
