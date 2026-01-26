@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ThemeButton : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class ThemeButton : MonoBehaviour
     public ThemeManager ThemeManager;
 
     // Thumbnail component, sets thumbnail
-    public SpriteRenderer SpriteRenderer;
+    public Image ThumbnailRenderer;
 
     public ThemeButton(Theme theme, ThemeManager manager)
     {
@@ -22,8 +23,7 @@ public class ThemeButton : MonoBehaviour
     void Start()
     {
         // loads thumbnail on load
-        // TODO: TEST THIS
-        SpriteRenderer.sprite=Theme.Thumbnail;
+        ThumbnailRenderer.sprite=Theme.Thumbnail;
     }
 
     // Update is called once per frame
