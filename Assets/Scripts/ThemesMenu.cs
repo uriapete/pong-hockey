@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ThemesMenu : MonoBehaviour
 {
@@ -10,6 +11,12 @@ public class ThemesMenu : MonoBehaviour
 
     // list of bottons in scene
     public ThemeButton[] Buttons;
+
+    // last page button
+    public Button LastPageBtn;
+
+    // next page button
+    public Button NextPageBtn;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
