@@ -36,6 +36,9 @@ public class ThemeManager : MonoBehaviour
     [Header("Halloween")]
     public Sprite[] halloweenTheme;
 
+    [Header("Classic")]
+    public Sprite[] classicTheme;
+
     // temporary id variable for pre-ui testing.
     private int TEMPThemeID = 0;
 
