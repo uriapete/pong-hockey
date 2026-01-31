@@ -84,7 +84,7 @@ public class ThemesMenu : MonoBehaviour
 
             // else, enable and set theme
             button.enabled=true;
-            button.Theme=ThemeManager.themes[startIdx+i];
+            button.ChangeBtnTheme(ThemeManager.themes[startIdx+i]);
         }
 
         // if on first page, do not show last page button
