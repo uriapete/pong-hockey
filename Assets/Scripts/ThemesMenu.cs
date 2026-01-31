@@ -72,5 +72,13 @@ public class ThemesMenu : MonoBehaviour
             button.enabled=true;
             button.Theme=ThemeManager.themes[startIdx+i];
         }
+
+        // if on first page, do not show last page button
+        // else show
+        LastPageBtn.enabled = startIdx > 0;
+
+        // if on last page, do not show next page button
+        // else show
+        NextPageBtn.enabled = startIdx+Buttons.Length >= ThemeManager.themes.Length;
     }
 }
