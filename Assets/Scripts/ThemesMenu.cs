@@ -93,6 +93,6 @@ public class ThemesMenu : MonoBehaviour
 
         // if on last page, do not show next page button
         // else show
-        // NextPageBtn.enabled = startIdx+Buttons.Length >= ThemeManager.themes.Length;
+        NextPageBtn.enabled = startIdx+Buttons.Length <= ThemeManager.themes.Length;
     }
 }
