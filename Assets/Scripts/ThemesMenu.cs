@@ -46,5 +46,24 @@ public class ThemesMenu : MonoBehaviour
                 // thmBtn.x = start_x + (idx*offset)
             // add to tree under this (ThemesMenu)
         // next
+        
+        // for each button on the menu...
+        for (int i = 0; i < Buttons.Length; i++)
+        {
+            // get the button
+            ThemeButton button = Buttons[i];
+
+            // if we ran out of themes...
+            if (startIdx+i >= ThemeManager.themes.Length)
+            {
+                // disable and skip
+                button.enabled=false;
+                continue;
+            }
+
+            // else, enable and set theme
+            button.enabled=true;
+            button.Theme=ThemeManager.themes[startIdx+i];
+        }
     }
 }
