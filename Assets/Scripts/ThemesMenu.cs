@@ -8,6 +8,9 @@ public class ThemesMenu : MonoBehaviour
     // Prefab for buttons
     public GameObject ThemeButton;
 
+    // list of bottons in scene
+    public ThemeButton[] Buttons;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
