@@ -34,8 +34,8 @@ public class ThemeButton : MonoBehaviour
 
     public void ChangeBtnTheme(Theme theme){
         // loads thumbnail on load
-        ThumbnailRenderer.sprite=Theme.Thumbnail;
         Theme = theme;
+        ThumbnailRenderer.sprite=Theme.Thumbnail;
     }
 
     // Tells the ThemeManager to change it's theme to this button's Theme.
