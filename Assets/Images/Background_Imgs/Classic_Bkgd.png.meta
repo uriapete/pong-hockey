@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f7d2321f542b54f4793df430ba5c028a
+guid: 3e7063d599d38704db9fdeea3ab2cac1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1952258401829744170
-    second: DVDOrig_Ball_0
+      213: 3607600120628477640
+    second: Classic_Bkgd_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DVDOrig_Ball_0
+      name: Classic_Bkgd_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 46
-        width: 172
-        height: 82
+        x: 0
+        y: 0
+        width: 1519
+        height: 845
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a2e65d64ca0d71b10800000000000000
-      internalID: 1952258401829744170
+      spriteID: 8ce77b12235c01230800000000000000
+      internalID: 3607600120628477640
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DVDOrig_Ball_0: 1952258401829744170
+      Classic_Bkgd_0: 3607600120628477640
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
