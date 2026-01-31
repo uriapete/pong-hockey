@@ -9312,6 +9312,8 @@ MonoBehaviour:
   - {fileID: 1293065014}
   - {fileID: 1724988816}
   - {fileID: 1767905232}
+  LastPageBtn: {fileID: 733498553}
+  NextPageBtn: {fileID: 1018071889}
 --- !u!1 &1987046971
 GameObject:
   m_ObjectHideFlags: 0
