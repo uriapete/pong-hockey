@@ -18,6 +18,9 @@ public class ThemesMenu : MonoBehaviour
     // next page button
     public Button NextPageBtn;
 
+    // the current idx of the theme in left button
+    private int CurrentStartIdx = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,6 +36,7 @@ public class ThemesMenu : MonoBehaviour
     // Takes three themes from the theme list, loads their buttons in the menu.
     void LoadThemes(int startIdx = 0)
     {
+        CurrentStartIdx = startIdx;
         // TODO: Implement pseudocode.
 
         // Take ThemeManager.Themes[]
