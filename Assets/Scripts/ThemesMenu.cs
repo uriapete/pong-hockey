@@ -78,21 +78,21 @@ public class ThemesMenu : MonoBehaviour
             if (startIdx+i >= ThemeManager.themes.Length)
             {
                 // disable and skip
-                button.enabled=false;
+                button.gameObject.SetActive(false);
                 continue;
             }
 
             // else, enable and set theme
-            button.enabled=true;
+            button.gameObject.SetActive(true);
             button.ChangeBtnTheme(ThemeManager.themes[startIdx+i]);
         }
 
         // if on first page, do not show last page button
         // else show
-        LastPageBtn.enabled = startIdx > 0;
+        LastPageBtn.gameObject.SetActive(startIdx > 0);
 
         // if on last page, do not show next page button
         // else show
-        NextPageBtn.enabled = startIdx+Buttons.Length <= ThemeManager.themes.Length;
+        NextPageBtn.gameObject.SetActive(startIdx+Buttons.Length <= ThemeManager.themes.Length);
     }
 }
