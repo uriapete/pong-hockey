@@ -1019,10 +1019,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1715100862}
   - {fileID: 1996147341}
   - {fileID: 529659945}
-  m_Father: {fileID: 1722854491}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -1069,7 +1068,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1715100863}
+  m_TargetGraphic: {fileID: 0}
   toggleTransition: 1
   graphic: {fileID: 1996147342}
   m_Group: {fileID: 0}
@@ -2052,7 +2051,7 @@ MonoBehaviour:
   m_text: Option A
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c925dcb45f9c9864a935928ccea4d13e, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4332624503718887375, guid: c925dcb45f9c9864a935928ccea4d13e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2117,7 +2116,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &529659944
@@ -2513,8 +2512,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1722854491}
+  m_Children: []
   m_Father: {fileID: 1512985770}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3690,6 +3688,7 @@ MonoBehaviour:
   paddleR: {fileID: 554194956}
   paddleL: {fileID: 2044501285}
   audioManager: {fileID: 1003852000}
+  currentTheme: {fileID: 0}
   themes:
   - {fileID: 11400000, guid: e5a3fe1ca63067f4393eb571908ad125, type: 2}
   - {fileID: 11400000, guid: 8eee69270eb7f44aea95f8b7f3baf82d, type: 2}
@@ -5451,6 +5450,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291881020}
   m_CullTransparentMesh: 1
+--- !u!114 &1293065014 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7279845036631860523, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
+  m_PrefabInstance: {fileID: 149358990}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 118b172ccb7a74104996c2a97c71cfda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &1294023133
 GameObject:
   m_ObjectHideFlags: 0
@@ -6118,8 +6128,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1712729367}
+  m_Children: []
   m_Father: {fileID: 2075846331}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -6422,7 +6431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ScrollRect
-  m_Content: {fileID: 1722854491}
+  m_Content: {fileID: 0}
   m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 2
@@ -7496,6 +7505,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8703079476257224314, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
   m_PrefabInstance: {fileID: 1724988814}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1724988816 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7279845036631860523, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
+  m_PrefabInstance: {fileID: 1724988814}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 118b172ccb7a74104996c2a97c71cfda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &1767905230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7606,6 +7626,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8703079476257224314, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
   m_PrefabInstance: {fileID: 1767905230}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1767905232 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7279845036631860523, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
+  m_PrefabInstance: {fileID: 1767905230}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 118b172ccb7a74104996c2a97c71cfda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &1791589867
 GameObject:
   m_ObjectHideFlags: 0
@@ -8761,6 +8792,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   ThemeManager: {fileID: 987749946}
   ThemeButton: {fileID: 2945649037634444144, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
+  Buttons:
+  - {fileID: 1293065014}
+  - {fileID: 1724988816}
+  - {fileID: 1767905232}
 --- !u!1 &1987046971
 GameObject:
   m_ObjectHideFlags: 0
@@ -9524,7 +9559,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1737706783}
   - {fileID: 710366831}
   - {fileID: 1428793124}
   m_Father: {fileID: 1300938759}
@@ -9797,3 +9831,4 @@ SceneRoots:
   - {fileID: 1003852001}
   - {fileID: 987749947}
   - {fileID: 1855378643}
+  - {fileID: 230013791}
