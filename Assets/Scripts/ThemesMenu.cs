@@ -33,6 +33,16 @@ public class ThemesMenu : MonoBehaviour
         
     }
 
+    // load last page
+    public void LastPage(){
+        LoadThemes(CurrentStartIdx-Buttons.Length);
+    }
+
+    // load next page
+    public void NextPage(){
+        LoadThemes(CurrentStartIdx+Buttons.Length);
+    }
+
     // Takes three themes from the theme list, loads their buttons in the menu.
     void LoadThemes(int startIdx = 0)
     {
