@@ -24,7 +24,7 @@ public class ThemesMenu : MonoBehaviour
     }
 
     // Takes three themes from the theme list, loads their buttons in the menu.
-    void LoadThemes(int startIdx)
+    void LoadThemes(int startIdx = 0)
     {
         // TODO: Implement pseudocode.
 
