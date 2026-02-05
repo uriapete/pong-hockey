@@ -454,6 +454,10 @@ PrefabInstance:
       propertyPath: ThemeManager
       value: 
       objectReference: {fileID: 987749946}
+    - target: {fileID: 7430837093351997975, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8703079476257224314, guid: 8d58eb62080f24ebd937b853406cb8af, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
