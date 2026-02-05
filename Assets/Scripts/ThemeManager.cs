@@ -18,7 +18,7 @@ public class ThemeManager : MonoBehaviour
     [Header("Sprite Themes: [Background, Ball, PaddleR, PaddleL]")]  //NOTE: ORDER THEM CORRECTLY IN EDITOR; ASSIGNS SPRITE BY ORDER IN ARRAY
 
     // current theme selected.
-    private Theme currentTheme;
+    public Theme currentTheme;
 
     // array of themes to choose from.
     // selected in editor.
@@ -73,7 +73,7 @@ public class ThemeManager : MonoBehaviour
     }
 
     // implements the provided theme.
-    public void ChangeTheme(Theme theme)
+    private void ChangeTheme(Theme theme)
     {
         // sets sprites (visuals)
         background.sprite = theme.Background;

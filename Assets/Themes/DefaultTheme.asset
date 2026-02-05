@@ -21,3 +21,4 @@ MonoBehaviour:
   PaddleHit2SFX: {fileID: 8300000, guid: e9c67bfdad11b624cbe77a9ec1c5372e, type: 3}
   Scored1SFX: {fileID: 8300000, guid: 999e70fdad491884da737938d1cbf212, type: 3}
   Scored2SFX: {fileID: 8300000, guid: d2ab2645ea7546140b50e458244e0f43, type: 3}
+  Thumbnail: {fileID: 1586949848013723687, guid: e686eabbcc57da2a3a4be1c296002910, type: 3}
