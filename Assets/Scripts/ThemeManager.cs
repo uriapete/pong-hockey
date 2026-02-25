@@ -53,12 +53,12 @@ public class ThemeManager : MonoBehaviour
     void Update()
     {
         // switches theme on space
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ++TEMPThemeID;
-            TEMPThemeID%=themes.Length;
-            PickTheme(TEMPThemeID);
-        }
+        ///if (Input.GetKeyDown(KeyCode.Space))
+        ///{
+        ///    ++TEMPThemeID;
+        ///    TEMPThemeID%=themes.Length;
+        ///    PickTheme(TEMPThemeID);
+        ///}
     }
 
     // takes a theme, implements into play
