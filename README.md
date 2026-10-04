@@ -1,6 +1,6 @@
 # Pong-Hockey (Work In Progress)
 
-<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGVxdXg1d2R3cWN4czhwaHkxazdwMTJ0aThsdDN0YXJxeDBwY2N5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u5YsgaMKVKkQlyVnvu/giphy.gif" />
+<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzk0ZDlmbWxsNXdwbHp1NmZzbmRnb216bmUwcjIzYXc0cnAzaGJiNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rm2rqurx5srWcoYZyy/giphy.gif" />
 
 A game that simulates 7 rounds of 2D Air-Hockey. In its first official build iterations, we will recreate regular pong. Once we've completed the pong stage, we will then develop and transform it into its final stage, Air Hockey.
 
